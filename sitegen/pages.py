@@ -11,6 +11,7 @@ from .core import (
     definition_list,
     empty_state,
     esc,
+    extension_of,
     inline_list,
     is_viewable,
     paragraphs,
@@ -75,6 +76,11 @@ def document_row(doc: dict, depth: int) -> str:
     file_path = str(doc.get("file") or "").strip()
     href = rel(depth, file_path) if file_path else ""
 
+    # A small chip showing the file format, e.g. PDF or DOCX.
+    extension = extension_of(file_path).lstrip(".").upper() if file_path else ""
+    badge = f'<span class="doc-badge">{esc(extension)}</span>' if extension else ""
+    meta_html = f'<p class="doc-meta">{badge}{esc(meta)}</p>' if (badge or meta) else ""
+
     title_html = (
         f'<h3 class="doc-title"><a class="text-link" href="{esc(href)}">{esc(doc.get("title", ""))}</a></h3>'
         if href
@@ -91,7 +97,7 @@ def document_row(doc: dict, depth: int) -> str:
 
     return f"""<li class="doc-row" data-doc data-title="{esc(search_blob)}" data-type="{esc(str(doc.get("type") or ""))}" data-year="{esc(str(doc.get("year") or ""))}" data-category="{esc(str(doc.get("category") or ""))}" data-project="{esc(str(doc.get("project") or ""))}">
           <div class="doc-main">
-            <p class="doc-meta">{esc(meta)}</p>
+            {meta_html}
             {title_html}
             {description_html}
             {tags_html}
@@ -417,11 +423,30 @@ def about_page(content: dict, depth: int) -> str:
     skills_block = skills_section(content["skills"], depth)
     goals_block = section(about.get("goalsHeading", "Current direction"), paragraphs(about.get("goals", [])))
 
+    # Optional portrait. Point "file" at your own photograph to replace the
+    # bundled placeholder frame.
+    portrait_config = about.get("portrait") or {}
+    portrait_html = ""
+    portrait_file = str(portrait_config.get("file") or "").strip()
+    if portrait_file:
+        caption = portrait_config.get("caption") or ""
+        portrait_html = (
+            f'<figure class="portrait">'
+            f'<img src="{esc(rel(depth, portrait_file))}" alt="{esc(portrait_config.get("alt", ""))}"'
+            f' width="480" height="600" decoding="async">'
+            + (f"<figcaption>{rich_text(caption)}</figcaption>" if caption else "")
+            + "</figure>"
+        )
+
+    intro_html = paragraphs(about.get("bio", []), classes="prose-text")
+    if portrait_html:
+        intro_html = f'<div class="about-intro">{intro_html}{portrait_html}</div>'
+
     body = f"""
       <header class="page-header">
         <h1 class="page-title">About</h1>
       </header>
-      {section(about.get("bioHeading", "About me"), paragraphs(about.get("bio", []), classes="prose-text"))}
+      {section(about.get("bioHeading", "About me"), intro_html)}
       {education_block}
       {experience_block}
       {skills_block}

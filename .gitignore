@@ -1,4 +1,4 @@
-# Ignore the build output — GitHub Actions rebuilds it on every push.
+# Build output - GitHub Actions rebuilds it on every push.
 dist/
 
 # Python
@@ -11,3 +11,13 @@ __pycache__/
 .idea/
 .DS_Store
 Thumbs.db
+
+# ---------------------------------------------------------------------------
+# Unrelated working files kept in this folder (not part of the website):
+# APA style-reference material and spreadsheet notes.
+# Narrow these patterns if you ever need to publish a file matching them.
+# ---------------------------------------------------------------------------
+apa*
+parse_apa_pdf.py
+Future_Completed.xlsx
+test_ins.xlsx

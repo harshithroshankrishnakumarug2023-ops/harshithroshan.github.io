@@ -235,8 +235,18 @@ def head_tags(site: dict, *, title: str, description: str, path: str, depth: int
     ]
     if canonical:
         tags.append(f'<meta property="og:url" content="{esc(canonical)}">')
+
+    # Social preview image. Optional: drop a 1200x630 PNG/JPG into public/images/
+    # and set "ogImage" in content/site.json to share images that look right.
+    og_image = str(site.get("ogImage") or "").strip()
+    if og_image and base_url:
+        image_url = og_image if og_image.startswith("http") else f"{base_url}/{og_image.lstrip('/')}"
+        tags.append(f'<meta property="og:image" content="{esc(image_url)}">')
+        if site.get("ogImageAlt"):
+            tags.append(f'<meta property="og:image:alt" content="{esc(site["ogImageAlt"])}">')
+
     tags += [
-        '<meta name="twitter:card" content="summary">',
+        f'<meta name="twitter:card" content="{"summary_large_image" if og_image else "summary"}">',
         '<meta name="twitter:title" content="' + esc(page_title) + '">',
         '<meta name="twitter:description" content="' + esc(description) + '">',
         '<link rel="icon" href="' + rel(depth, "favicon.svg") + '" type="image/svg+xml">',

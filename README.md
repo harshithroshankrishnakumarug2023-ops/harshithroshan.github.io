@@ -393,30 +393,56 @@ Everything visual lives at the top of **`src/styles/main.css`**:
 
 ```css
 :root {
-  --font-sans:  "Inter", ...;            /* navigation, labels, body */
-  --font-serif: "Source Serif 4", ...;   /* headings and editorial text */
-  --paper:  #fbfbfa;                     /* background */
-  --ink:    #1b1b19;                     /* main text */
-  --muted:  #5f5f59;                     /* secondary text */
-  --faint:  #7c7c74;                     /* metadata, placeholders */
-  --rule:   #e4e4df;                     /* hairline dividers */
-  --accent: #1f4e6e;                     /* single accent colour */
+  --font-sans:  "Inter", ...;            /* navigation, labels, buttons, metadata */
+  --font-serif: "Source Serif 4", ...;   /* body text and headings */
+  --paper:  #fdfdfb;                     /* page background */
+  --paper-2: #f6f6f2;                    /* secondary surfaces, footer */
+  --ink:    #1a1a18;                     /* main text */
+  --ink-soft: #3a3a36;                   /* body copy inside entries */
+  --muted:  #5c5c56;                     /* secondary text */
+  --faint:  #6b6b64;                     /* metadata and placeholders (AA) */
+  --rule:   #e3e3dd;                     /* hairline dividers */
+  --rule-strong: #cfcfc6;                /* borders on buttons and chips */
+  --accent: #1f4e6e;                     /* primary accent colour */
+  --accent-deep: #2c6152;                /* second gradient stop */
   --measure: 36rem;                      /* line length of body paragraphs */
-  --radius:  3px;                        /* corner rounding */
+  --radius:  4px;                        /* corner rounding */
+  --shadow-sm / --shadow-md / --shadow-lg /* depth, used sparingly */
 }
 ```
 
-- **Accent colour:** change `--accent` (and `--accent-dark`). One colour only —
-  that restraint is what keeps the site looking academic.
-- **Fonts:** change `--font-sans` / `--font-serif`. If you replace the Google
-  Fonts families, also update the font URL in `sitegen/core.py`
-  (`FONT_STACK`), or delete that line to use only system fonts.
+- **Accent colour:** change `--accent` (with `--accent-dark` and
+  `--accent-deep`). One accent only — that restraint is what keeps the site
+  looking academic.
+- **Fonts:** body text is set in **Source Serif 4** (a modern book serif, warmer
+  and more legible than Times New Roman), while navigation, labels and buttons
+  stay in **Inter** so the interface reads as a distinct layer. To use a
+  different pairing, change `--font-sans` / `--font-serif` *and* update the
+  Google Fonts URL in `sitegen/core.py` (`FONT_STACK`), or delete that line to
+  fall back to system fonts.
 - **Line length:** adjust `--measure` (36rem ≈ 70 characters).
 - **Spacing:** the main scale values are in the `clamp()` expressions
   throughout the file; they already scale down on phones.
+- **Gradients:** the page background, the featured-research panel, the primary
+  button and the file-format chips use very low-contrast gradients defined in
+  the tokens above and in the component rules. To flatten them, delete the
+  `background-image` declarations in `body`, `.featured`, `.btn-primary`,
+  `.doc-badge` and `.filters`.
 
-There are no images, illustrations, gradients or decorative effects, and the
-design is intended to stay that way.
+### Images
+
+- **Portrait:** `content/about.json` → `"portrait"` → `"file"`. It currently
+  points at `images/portrait-placeholder.svg`, a neutral placeholder frame with
+  a silhouette and no invented face. To use a real photograph, drop the file
+  into `public/images/` and change the path. Delete the whole `portrait` block
+  to remove the image entirely; on wide screens it sits beside the biography,
+  and on phones it appears above it.
+- **Social preview image:** drop a **1200 × 630** PNG or JPG into
+  `public/images/` and set `"ogImage"` in `content/site.json`. While it is
+  empty, no `og:image` tag is emitted and the share card falls back to the page
+  title and description.
+- Any other images can go in `public/images/` and be linked from content files
+  with normal Markdown links, e.g. `[figure 1](images/figure-1.png)`.
 
 ---
 
@@ -460,6 +486,10 @@ square brackets, and everything listed below, is meant to be replaced by you:
 - [ ] `content/skills.json` — remove any skill that is not yours
 - [ ] `content/cv.json` — `lastUpdated`, and any sections you can fill in
 - [ ] `content/home.json` — the introduction and research themes, in your voice
+- [ ] Add a real photograph to `public/images/` and update `content/about.json`
+      → `portrait.file` (or delete the block to keep the placeholder away)
+- [ ] Add a 1200 × 630 share image to `public/images/` and set `ogImage` in
+      `content/site.json`
 - [ ] Review the project description and research question for accuracy; they
       were written as neutral starting text, not as results
 - [ ] Confirm the placeholder PDFs are no longer referenced anywhere

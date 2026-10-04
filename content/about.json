@@ -2,6 +2,12 @@
   "_readme": "ABOUT PAGE. Paragraphs are plain text and rendered in order. Education and experience entries are optional — delete any entry you do not want published, and delete a whole section to remove it.",
 
   "bioHeading": "About me",
+  "_portrait": "Optional. Delete the \"portrait\" block to remove the image entirely. To use a real photograph, drop the file into public/images/ and change \"file\" to its path.",
+  "portrait": {
+    "file": "images/portrait-placeholder.svg",
+    "alt": "Placeholder frame awaiting a portrait photograph",
+    "caption": "Replace with your own photograph: put the image in public/images/ and update the path above."
+  },
   "bio": [
     "I am an undergraduate student of psychology at Ashoka University, with minors in biology and philosophy. The breadth of that training — biological mechanisms, philosophical argument, and psychological measurement — shapes how I approach research questions.",
     "I am interested in cognitive processes such as attention and inhibitory control, and in clinical questions around emotional processing, childhood experiences, and mental health. Much of my work concerns how early experiences are carried forward into the way people attend to, interpret, and respond to emotional material.",
