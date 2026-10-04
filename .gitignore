@@ -1,0 +1,13 @@
+# Ignore the build output — GitHub Actions rebuilds it on every push.
+dist/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

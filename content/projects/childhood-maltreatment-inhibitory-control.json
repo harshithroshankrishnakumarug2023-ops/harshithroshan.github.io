@@ -1,0 +1,61 @@
+{
+  "_readme": "RESEARCH PROJECT. One file per project in this folder; the filename is irrelevant because the 'slug' field sets the URL (/research/<slug>/). Files whose name starts with an underscore are ignored, so '_template.json' is a safe starting point. Delete any field you do not need — empty fields are simply not displayed. Text in [square brackets] is a placeholder: replace it with your own information.",
+
+  "slug": "childhood-maltreatment-inhibitory-control",
+  "title": "Childhood Emotional Abuse, Emotional Neglect, and Inhibitory Control",
+  "year": "2026",
+  "status": "Undergraduate Research Project",
+  "featured": true,
+
+  "short": "A study of how childhood emotional maltreatment relates to inhibitory control in emerging adults.",
+
+  "description": [
+    "This project asks whether experiences of emotional maltreatment in childhood are associated with differences in inhibitory control later in life. Emotional abuse and emotional neglect are forms of childhood psychological maltreatment that do not necessarily involve physical harm, and are therefore often difficult for participants to identify and report.",
+    "Inhibitory control is treated here as a behavioral index rather than a clinical one: the capacity to withhold a prepared response, measured through reaction times and error rates on a Go/No-Go task."
+  ],
+
+  "researchQuestion": "Is childhood emotional maltreatment — emotional abuse and emotional neglect — associated with inhibitory control in emerging adults?",
+
+  "background": [
+    "The project grew out of an interest in how early emotional experience is carried forward into adult functioning, specifically into the cognitive control processes required to withhold a prepared response and act against a dominant one.",
+    "Inhibitory control is examined behaviorally through a Go/No-Go paradigm, in which responding to a frequent go signal and withholding it on stop trials can be measured directly through response times and error rates.",
+    "[Add a short paragraph on the theoretical background and the specific literature this project builds on.]"
+  ],
+
+  "focus": ["Emotional processing", "Inhibitory control"],
+  "methods": ["Go/No-Go paradigm", "PsychoPy", "Behavioral experimentation", "Questionnaire research"],
+  "skills": ["Experimental design", "Reaction-time analysis", "Quantitative analysis"],
+
+  "institution": "[Institution / lab]",
+  "role": "[Your role — e.g. study design, data collection, analysis]",
+  "supervisor": "[Supervisor]",
+  "collaborators": [],
+
+  "method": {
+    "participants": "[Participants — sample size, recruitment and inclusion criteria]",
+    "design": "[Design — e.g. cross-sectional / correlational]",
+    "measures": "[Measures — questionnaires and scales, with the subscales used]",
+    "stimuli": "[Stimuli — emotional picture sets or other materials, and why they were selected]",
+    "task": "Go/No-Go task: frequent go trials requiring a response and infrequent stop trials requiring response inhibition. Performance is recorded as response time and accuracy.",
+    "procedure": "[Procedure — what a participant does, in order, and roughly how long it takes]",
+    "software": ["PsychoPy (experiment programming)", "jamovi (analysis)"],
+    "analysis": "[Analysis — key variables, control variables, and the statistical approach]"
+  },
+
+  "currentStatus": "[Current status — e.g. Conceptualization, Data collection, Analysis, Manuscript preparation, Completed]",
+
+  "_documents": "Materials linked from the project page. 'file' is a path inside public/. Any file type can be linked — PDF, DOCX, PPTX, XLSX, CSV, TXT, ZIP or code. Omit 'file' for a link you do not want to publish yet.",
+  "documents": [
+    {
+      "label": "Research proposal",
+      "type": "PDF",
+      "file": "documents/proposals/childhood-emotional-abuse-emotional-neglect-inhibitory-control.pdf"
+    }
+  ],
+
+  "_externalLinks": "Public repositories, pre-registrations, code. Same shape as documents, with 'url' instead of 'file'.",
+  "externalLinks": [],
+
+  "_references": "Optional. Cite as: {\"authors\": \"Surname, A. A., & Surname, B. B. (Year).\", \"reference\": \"Title of the work. Journal, volume(issue), pages. https://doi.org/xxxxx\"}",
+  "references": []
+}

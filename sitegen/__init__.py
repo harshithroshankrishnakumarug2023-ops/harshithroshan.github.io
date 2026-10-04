@@ -1,0 +1,1 @@
+"""Minimal, dependency-free static site generator for the academic website."""

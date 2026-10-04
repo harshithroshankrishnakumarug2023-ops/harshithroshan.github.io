@@ -1,0 +1,12 @@
+{
+  "_readme": "RESEARCH PAGE CONTENT. 'intro' is a short lead paragraph. Publications live in content/publications.json and are shown at the bottom of the page.",
+
+  "heading": "Research",
+  "intro": [
+    "Most of my work is experimental: small, carefully controlled behavioral studies with clearly specified questions, tasks and measures. I am interested in how emotional experience and early environment influence cognitive control, and in the measurement problems that come with studying those questions.",
+    "Each project below lists its methods and status. Full methods, analyses and materials are given on the project page."
+  ],
+
+  "publicationsHeading": "Publications & manuscripts",
+  "projectsEmpty": "Further projects will be added here as they progress."
+}

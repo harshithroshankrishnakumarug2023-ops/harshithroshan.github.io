@@ -1,0 +1,37 @@
+{
+  "_readme": "ABOUT PAGE. Paragraphs are plain text and rendered in order. Education and experience entries are optional — delete any entry you do not want published, and delete a whole section to remove it.",
+
+  "bioHeading": "About me",
+  "bio": [
+    "I am an undergraduate student of psychology at Ashoka University, with minors in biology and philosophy. The breadth of that training — biological mechanisms, philosophical argument, and psychological measurement — shapes how I approach research questions.",
+    "I am interested in cognitive processes such as attention and inhibitory control, and in clinical questions around emotional processing, childhood experiences, and mental health. Much of my work concerns how early experiences are carried forward into the way people attend to, interpret, and respond to emotional material.",
+    "Methodologically, I work with behavioral experimentation — reaction-time paradigms such as Go/No-Go tasks built in PsychoPy — alongside questionnaire research and quantitative analysis. I care about doing this work carefully: clear design, appropriate measures, and analysis that the data can actually support.",
+    "I hope to continue this line of work in graduate study, with an emphasis on [your intended focus]."
+  ],
+
+  "educationHeading": "Education",
+  "education": [
+    {
+      "title": "Ashoka University",
+      "subtitle": "B.Sc. Psychology",
+      "date": "",
+      "body": "Minors: Biology and Philosophy.",
+      "bullets": [],
+      "links": []
+    }
+  ],
+
+  "experienceHeading": "Research experience",
+  "_experience": "Add an entry for each lab, project or research assistantship. Example shape: {\"title\": \"Lab name\", \"subtitle\": \"Research assistant\", \"date\": \"2025 – 2026\", \"body\": \"One-line research area.\", \"bullets\": [\"What you actually did\"], \"links\": []}. An empty list shows a graceful placeholder.",
+  "experience": [],
+
+  "experienceEmpty": "Research experience will be listed here as projects progress.",
+
+  "skillsHeading": "Skills",
+  "_skillsNote": "Skills live in content/skills.json so that the About page and the CV stay in sync.",
+
+  "goalsHeading": "Current direction",
+  "goals": [
+    "My current work examines how childhood emotional experiences relate to inhibitory control in emerging adults. In the longer term I want to keep working at the intersection of cognitive and clinical psychology, where experimental methods can be brought to bear on questions about mental health."
+  ]
+}

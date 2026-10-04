@@ -1,0 +1,54 @@
+{
+  "_readme": "RESEARCH PROJECT TEMPLATE. This file is ignored by the build (filenames starting with _ are skipped). To add a project: copy this file to content/projects/my-project.json, remove the leading underscore from the filename, fill in the fields, and delete anything you do not need.",
+
+  "slug": "my-project",
+  "title": "[Project title]",
+  "year": "[Year]",
+  "status": "[Status — e.g. Undergraduate Thesis, ICSSR Research Project, Manuscript preparation]",
+  "featured": false,
+
+  "short": "[One sentence describing the project, used on the homepage and research list.]",
+
+  "description": [
+    "[Overview: a short academic summary of the project, two or three sentences.]"
+  ],
+
+  "researchQuestion": "[The central research question, stated in one or two sentences.]",
+
+  "background": [
+    "[The theoretical motivation for the project, in a short paragraph.]"
+  ],
+
+  "focus": ["[Focus area]"],
+  "methods": ["[Method]", "[Tool]"],
+  "skills": ["[Skill used in this project]"],
+
+  "institution": "[Institution / lab]",
+  "role": "[Your role on the project]",
+  "supervisor": "[Supervisor]",
+  "collaborators": [],
+
+  "method": {
+    "participants": "[Participants]",
+    "design": "[Design]",
+    "measures": "[Measures]",
+    "stimuli": "[Stimuli]",
+    "task": "[Task]",
+    "procedure": "[Procedure]",
+    "software": ["[Software]"],
+    "analysis": "[Analysis]"
+  },
+
+  "currentStatus": "[Current status — e.g. Conceptualization, Data collection, Analysis, Manuscript preparation, Completed]",
+
+  "documents": [
+    {
+      "label": "[Document label]",
+      "type": "PDF",
+      "file": "documents/research/example.pdf"
+    }
+  ],
+
+  "externalLinks": [],
+  "references": []
+}

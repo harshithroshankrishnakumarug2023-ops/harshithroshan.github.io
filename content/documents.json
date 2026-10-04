@@ -1,0 +1,44 @@
+{
+  "_readme": "DOCUMENT LIBRARY. To add a document: (1) put the file in the matching folder inside public/documents/, (2) add an entry below. It appears in the library automatically. 'category' should match the folder name (cv, research, proposals, posters, presentations, writing, other). Set 'private' to true for anything that must stay off the public site — the entry is then removed from the library entirely (but remember: any file in public/ is still publicly reachable by direct URL, so leave such files out of the repository altogether).",
+
+  "intro": [
+    "Academic documents are grouped by type and can be viewed in the browser or downloaded directly. Files are stored in this repository and served as static files."
+  ],
+
+  "_categories": "Category labels, matching the folders in public/documents/. Remove a category here and its filter option disappears.",
+  "categories": [
+    { "id": "cv", "label": "CV" },
+    { "id": "research", "label": "Research" },
+    { "id": "proposals", "label": "Proposals" },
+    { "id": "posters", "label": "Posters" },
+    { "id": "presentations", "label": "Presentations" },
+    { "id": "writing", "label": "Writing" },
+    { "id": "other", "label": "Other" }
+  ],
+
+  "emptyState": "Research materials will be added as projects progress.",
+
+  "_documentShape": "{\"title\": \"\", \"description\": \"\", \"type\": \"PDF\", \"category\": \"research\", \"year\": \"2026\", \"file\": \"documents/research/example.pdf\", \"tags\": [], \"project\": \"<project slug, optional>\", \"featured\": false, \"private\": false}",
+  "documents": [
+    {
+      "title": "Curriculum Vitae",
+      "description": "Academic CV covering education, research experience, projects and skills.",
+      "type": "PDF",
+      "category": "cv",
+      "year": "2026",
+      "file": "documents/cv/harshith-roshan-cv.pdf",
+      "tags": ["Curriculum vitae"],
+      "featured": true
+    },
+    {
+      "title": "Childhood Emotional Abuse, Emotional Neglect, and Inhibitory Control",
+      "description": "A research proposal examining the relationship between childhood psychological maltreatment and inhibitory control in emerging adults.",
+      "type": "Research Proposal",
+      "category": "proposals",
+      "year": "2026",
+      "file": "documents/proposals/childhood-emotional-abuse-emotional-neglect-inhibitory-control.pdf",
+      "project": "childhood-maltreatment-inhibitory-control",
+      "tags": ["Undergraduate Research"]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "_readme": "WRITING PAGE. Entries are grouped by category in the order listed below. To add a piece of writing: add an entry with 'category' set to one of the ids, plus a title, date, type and either a url or a file (for PDFs stored in public/documents/writing/).",
+
+  "intro": [
+    "Writing that is not part of a publication: literature reviews, course work, and explanations of psychological concepts for a general audience."
+  ],
+
+  "emptyState": "Selected academic and public writing will be listed here as it becomes available.",
+
+  "categories": [
+    { "id": "academic", "title": "Academic Writing" },
+    { "id": "science-communication", "title": "Science Communication" },
+    { "id": "public", "title": "Public Writing" },
+    { "id": "coursework", "title": "Coursework" }
+  ],
+
+  "_entryShape": "{\"category\": \"academic\", \"title\": \"Title of the piece\", \"date\": \"2026\", \"type\": \"Literature review\", \"publication\": \"Course, Institution\", \"description\": \"One or two sentences.\", \"url\": \"https://…\", \"file\": \"\"}",
+
+  "entries": []
+}

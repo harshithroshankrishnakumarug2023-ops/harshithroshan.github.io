@@ -1,0 +1,16 @@
+{
+  "_readme": "PUBLICATIONS. Entries are grouped by category and rendered in the order of 'categories'. Add an entry with 'category' set to one of the ids below. Nothing is displayed until you add real entries — the page then shows an empty state instead.",
+
+  "emptyState": "Publications and manuscripts will be listed here as they become available.",
+
+  "categories": [
+    { "id": "publications", "title": "Publications" },
+    { "id": "manuscripts", "title": "Manuscripts" },
+    { "id": "working-papers", "title": "Working Papers" },
+    { "id": "reports", "title": "Research Reports" }
+  ],
+
+  "_entryShape": "{\"category\": \"manuscripts\", \"authors\": \"Roshan, H., & Author, A. A.\", \"year\": \"2026\", \"title\": \"Title of the paper\", \"venue\": \"Journal Name\", \"status\": \"Under review\", \"doi\": \"\", \"links\": [{\"label\": \"PDF\", \"file\": \"documents/research/paper.pdf\"}], \"externalUrl\": \"\"}",
+
+  "entries": []
+}
