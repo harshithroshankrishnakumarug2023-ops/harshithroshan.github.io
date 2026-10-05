@@ -472,16 +472,11 @@ def about_page(content: dict, depth: int) -> str:
     if portrait_html:
         intro_html = f'<div class="about-intro">{intro_html}{portrait_html}</div>'
 
-    # With no bioHeading the biography sits directly under the page title, with
-    # no section heading repeating it and no hairline rule stranded above it.
-    bio_heading = str(about.get("bioHeading", "About me")).strip()
-    intro_block = section(bio_heading, intro_html) if bio_heading else intro_html
-
     body = f"""
       <header class="page-header">
         <h1 class="page-title">About</h1>
       </header>
-      {intro_block}
+      {section(about.get("bioHeading", "Background"), intro_html)}
       {education_block}
       {experience_block}
       {clinical_block}
