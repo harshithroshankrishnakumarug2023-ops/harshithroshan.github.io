@@ -293,7 +293,7 @@ def header(site: dict, *, depth: int, current: str) -> str:
 def footer(site: dict, *, depth: int) -> str:
     """Minimal footer: name, role, external links, copyright."""
     links = []
-    for key in ("email", "scholar", "github", "linkedin"):
+    for key in ("email", "github", "linkedin"):
         entry = social_link(site, key, depth=depth, inline=True)
         if entry:
             links.append(entry)
@@ -315,14 +315,13 @@ def footer(site: dict, *, depth: int) -> str:
 
 
 def social_link(site: dict, key: str, *, depth: int, inline: bool = False) -> str:
-    """Render one of the site-wide links (email / scholar / github / linkedin).
+    """Render one of the site-wide links (email / github / linkedin).
 
     When no URL has been configured yet, a clearly marked placeholder is shown
     instead of an invented or broken link.
     """
     labels = {
         "email": "Email",
-        "scholar": "Google Scholar",
         "github": "GitHub",
         "linkedin": "LinkedIn",
     }

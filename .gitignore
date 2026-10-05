@@ -12,6 +12,9 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
+# Office lock files (~$name.xlsx and similar)
+~$*
+
 # ---------------------------------------------------------------------------
 # Unrelated working files kept in this folder (not part of the website):
 # APA style-reference material, spreadsheet notes, and one-off audit and

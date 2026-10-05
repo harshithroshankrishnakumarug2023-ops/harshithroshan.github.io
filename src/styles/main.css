@@ -37,8 +37,10 @@
   --shadow-lg: 0 1px 3px rgba(24, 24, 20, 0.05),
     0 22px 48px -20px rgba(24, 24, 20, 0.28);
 
-  --measure: 36rem;
-  --measure-wide: 44rem;
+  /* Line length. These set how far across the content column text runs; the
+     container is wider still, so lists and definitions reach the right edge. */
+  --measure: 58rem;
+  --measure-wide: 70rem;
   --radius: 4px;
 
   --step-0: 1.075rem;
@@ -204,7 +206,7 @@ strong {
 /* 4. Layout ============================================================= */
 
 .container {
-  width: min(100% - 2.5rem, 66rem);
+  width: min(100% - 2.5rem, 74rem);
   margin-inline: auto;
 }
 
@@ -905,7 +907,7 @@ a:hover {
 }
 
 .doc-list {
-  max-width: 52rem;
+  max-width: var(--measure-wide);
 }
 
 .doc-row {
@@ -966,7 +968,7 @@ a:hover {
 }
 
 .doc-desc {
-  max-width: 40rem;
+  max-width: var(--measure);
   margin: 0;
   font-size: 1rem;
   color: var(--muted);
@@ -1130,7 +1132,7 @@ html.js .js-only {
 
 @media (max-width: 46rem) {
   .container {
-    width: min(100% - 2rem, 66rem);
+    width: min(100% - 2rem, 74rem);
   }
 
   html.js .nav-toggle {

@@ -459,7 +459,6 @@ Edit **`content/site.json`**:
 ```json
 "links": {
   "email": "harshith.roshan@ashoka.edu.in",
-  "scholar": "https://scholar.google.com/citations?user=YOUR_ID",
   "linkedin": "https://www.linkedin.com/in/your-profile/",
   "github": "https://github.com/your-handle"
 }
@@ -467,7 +466,7 @@ Edit **`content/site.json`**:
 
 - An email address is automatically turned into a `mailto:` link.
 - A link that is left empty (`""`) is shown as a muted placeholder such as
-  `[Google Scholar]` rather than as a link, so nothing invented or broken ever
+  `[LinkedIn]` rather than as a link, so nothing invented or broken ever
   appears on the site.
 - These links feed the homepage, the footer and the contact page.
 
@@ -482,8 +481,6 @@ Everything published so far came from your own documents. Nothing on the site is
 invented, and anything you have not supplied is either hidden or shown as an
 obvious `[bracketed]` placeholder. The items left to do:
 
-- [ ] `content/site.json` — Google Scholar profile URL (email, LinkedIn and
-      GitHub are already set)
 - [ ] `content/projects/childhood-maltreatment-inhibitory-control.json` —
       `procedure` and `analysis` in the `method` block
 - [ ] `content/projects/childhood-maltreatment-inhibitory-control.json` —

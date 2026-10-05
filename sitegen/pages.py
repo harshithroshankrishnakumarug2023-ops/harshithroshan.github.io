@@ -325,7 +325,7 @@ def home_page(content: dict, depth: int) -> str:
         {"label": "Resume", "href": rel(depth, "resume/")},
         {"label": "Research", "href": rel(depth, "research/")},
     ]
-    for key in ("scholar", "linkedin", "email"):
+    for key in ("linkedin", "email"):
         entry = social_link(site, key, depth=depth, inline=True)
         hero_links.append({"label_html": entry})
 
@@ -371,7 +371,7 @@ def home_page(content: dict, depth: int) -> str:
     )
 
     contact_links = " ".join(
-        social_link(site, key, depth=depth, inline=True) for key in ("email", "scholar", "github", "linkedin")
+        social_link(site, key, depth=depth, inline=True) for key in ("email", "github", "linkedin")
     )
 
     body = f"""
@@ -768,11 +768,10 @@ def writing_page(content: dict, depth: int) -> str:
 
 def contact_page(content: dict, depth: int) -> str:
     site = content["site"]
-    labels = {"email": "Email", "scholar": "Google Scholar", "linkedin": "LinkedIn", "github": "GitHub"}
+    labels = {"email": "Email", "linkedin": "LinkedIn", "github": "GitHub"}
     rows = []
     for key, hint in (
         ("email", "Add your email address in content/site.json"),
-        ("scholar", "Add your Google Scholar profile URL in content/site.json"),
         ("linkedin", "Add your LinkedIn URL in content/site.json"),
         ("github", "Add your GitHub URL in content/site.json"),
     ):
