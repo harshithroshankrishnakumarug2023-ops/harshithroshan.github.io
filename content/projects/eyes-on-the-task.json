@@ -43,22 +43,27 @@
 
   "currentStatus": "Completed. Report written; a significant main effect of distractor relevance (F(1, 9) = 66.92, p < .001, η² = .881) and a significant relevance × difficulty interaction (F(1, 9) = 17.31, p = .002, η² = .658).",
 
-  "_documents": "Materials linked from the project page. 'file' is a path inside public/. Any file type can be linked — PDF, DOCX, PPTX, XLSX, CSV, TXT, ZIP or code. Omit 'file' for a link you do not want to publish yet.",
+  "_documents": "Materials linked from the project page. Use 'url' for a document hosted in this project's repository, or 'file' for a path inside public/. Omit both for a link you do not want to publish yet.",
   "documents": [
     {
       "label": "Project report",
       "type": "PDF",
-      "file": "documents/research/Eyes_on_the_Task_Report.pdf"
+      "url": "https://github.com/harshithroshankrishnakumarug2023-ops/eyes-on-the-task/blob/main/Eyes_on_the_Task_Report.pdf"
     },
     {
       "label": "Stimulus sheets",
       "type": "PDF",
-      "file": "documents/research/Eyes_on_the_Task_Stimulus_Sheets.pdf"
+      "url": "https://github.com/harshithroshankrishnakumarug2023-ops/eyes-on-the-task/blob/main/Eyes_on_the_Task_Stimulus_Sheets.pdf"
     }
   ],
 
   "_externalLinks": "Public repositories, pre-registrations, code. Same shape as documents, with 'url' instead of 'file'.",
-  "externalLinks": [],
+  "externalLinks": [
+    {
+      "label": "Project repository",
+      "url": "https://github.com/harshithroshankrishnakumarug2023-ops/eyes-on-the-task"
+    }
+  ],
 
   "_references": "Optional. Cite as: {\"authors\": \"Surname, A. A., & Surname, B. B. (Year).\", \"reference\": \"Title of the work. Journal, volume(issue), pages. https://doi.org/xxxxx\"}",
   "references": []

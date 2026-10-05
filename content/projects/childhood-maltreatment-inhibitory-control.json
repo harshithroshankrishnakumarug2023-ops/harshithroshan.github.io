@@ -45,17 +45,22 @@
 
   "currentStatus": "Pilot complete; main study in preparation.",
 
-  "_documents": "Materials linked from the project page. 'file' is a path inside public/. Any file type can be linked — PDF, DOCX, PPTX, XLSX, CSV, TXT, ZIP or code. Omit 'file' for a link you do not want to publish yet.",
+  "_documents": "Materials linked from the project page. Use 'url' for a document hosted in this project's repository, or 'file' for a path inside public/. Omit both for a link you do not want to publish yet.",
   "documents": [
     {
       "label": "Research proposal",
       "type": "PDF",
-      "file": "documents/proposals/ICSSR_Thesis_Research_Proposal.pdf"
+      "url": "https://github.com/harshithroshankrishnakumarug2023-ops/thesis-inhibitory-control/blob/main/ICSSR_Thesis_Research_Proposal.pdf"
     }
   ],
 
   "_externalLinks": "Public repositories, pre-registrations, code. Same shape as documents, with 'url' instead of 'file'.",
-  "externalLinks": [],
+  "externalLinks": [
+    {
+      "label": "Project repository",
+      "url": "https://github.com/harshithroshankrishnakumarug2023-ops/thesis-inhibitory-control"
+    }
+  ],
 
   "_references": "Optional. Cite as: {\"authors\": \"Surname, A. A., & Surname, B. B. (Year).\", \"reference\": \"Title of the work. Journal, volume(issue), pages. https://doi.org/xxxxx\"}",
   "references": []

@@ -1,11 +1,11 @@
 {
-  "_readme": "DOCUMENT LIBRARY. To add a document: (1) put the file in the matching folder inside public/documents/, (2) add an entry below. It appears in the library automatically. 'category' should match the folder name (resume, research, proposals, posters, presentations, writing, other). Set 'private' to true for anything that must stay off the public site — the entry is then removed from the library entirely (but remember: any file in public/ is still publicly reachable by direct URL, so leave such files out of the repository altogether).",
+  "_readme": "DOCUMENT LIBRARY. To add a document: (1) store the file — either in public/documents/ or in its own GitHub repository — then (2) add an entry below. Use 'file' for a path inside public/, or 'url' for a document hosted elsewhere, optionally with 'repository' for a link to that repository. It appears in the library automatically. Set 'private' to true for anything that must stay off the public site — the entry is then removed from the library entirely (but remember: any file in public/ is still publicly reachable by direct URL, so leave such files out of the repository altogether).",
 
   "intro": [
-    "Academic documents are grouped by type and can be viewed in the browser or downloaded directly. Files are stored in this repository and served as static files."
+    "Academic documents are grouped by type and open on GitHub, where each project keeps its own repository. Your resume is served directly from this site."
   ],
 
-  "_categories": "Category labels, matching the folders in public/documents/. Remove a category here and its filter option disappears.",
+  "_categories": "Category labels used by the filter. Remove a category here and its filter option disappears.",
   "categories": [
     { "id": "resume", "label": "Resume" },
     { "id": "research", "label": "Research" },
@@ -16,7 +16,7 @@
 
   "emptyState": "Research materials will be added as projects progress.",
 
-  "_documentShape": "{\"title\": \"\", \"description\": \"\", \"type\": \"PDF\", \"category\": \"research\", \"year\": \"2026\", \"file\": \"documents/research/example.pdf\", \"tags\": [], \"project\": \"<project slug, optional>\", \"featured\": false, \"private\": false}",
+  "_documentShape": "{\"title\": \"\", \"description\": \"\", \"type\": \"PDF\", \"category\": \"research\", \"year\": \"2026\", \"file\": \"documents/research/example.pdf\", \"url\": \"\", \"repository\": \"https://github.com/owner/repo\", \"tags\": [], \"project\": \"<project slug, optional>\", \"featured\": false, \"private\": false}",
   "documents": [
     {
       "title": "Resume",
@@ -34,7 +34,8 @@
       "type": "Research Proposal",
       "category": "proposals",
       "year": "2026",
-      "file": "documents/proposals/ICSSR_Thesis_Research_Proposal.pdf",
+      "url": "https://github.com/harshithroshankrishnakumarug2023-ops/thesis-inhibitory-control/blob/main/ICSSR_Thesis_Research_Proposal.pdf",
+      "repository": "https://github.com/harshithroshankrishnakumarug2023-ops/thesis-inhibitory-control",
       "project": "childhood-maltreatment-inhibitory-control",
       "tags": ["Undergraduate thesis", "ICSSR"]
     },
@@ -44,7 +45,8 @@
       "type": "Research Report",
       "category": "research",
       "year": "2026",
-      "file": "documents/research/Eyes_on_the_Task_Report.pdf",
+      "url": "https://github.com/harshithroshankrishnakumarug2023-ops/eyes-on-the-task/blob/main/Eyes_on_the_Task_Report.pdf",
+      "repository": "https://github.com/harshithroshankrishnakumarug2023-ops/eyes-on-the-task",
       "project": "eyes-on-the-task",
       "tags": ["Eye tracking", "Attention"]
     },
@@ -54,7 +56,8 @@
       "type": "Stimulus Materials",
       "category": "research",
       "year": "2026",
-      "file": "documents/research/Eyes_on_the_Task_Stimulus_Sheets.pdf",
+      "url": "https://github.com/harshithroshankrishnakumarug2023-ops/eyes-on-the-task/blob/main/Eyes_on_the_Task_Stimulus_Sheets.pdf",
+      "repository": "https://github.com/harshithroshankrishnakumarug2023-ops/eyes-on-the-task",
       "project": "eyes-on-the-task",
       "tags": ["Eye tracking", "Materials"]
     },
@@ -64,7 +67,8 @@
       "type": "Research Proposal",
       "category": "research",
       "year": "2025",
-      "file": "documents/research/Zebrafish_Quantity_Discrimination_Ideation.pdf",
+      "url": "https://github.com/harshithroshankrishnakumarug2023-ops/zebrafish-quantity-discrimination/blob/main/Zebrafish_Quantity_Discrimination_Ideation.pdf",
+      "repository": "https://github.com/harshithroshankrishnakumarug2023-ops/zebrafish-quantity-discrimination",
       "project": "zebrafish-quantity-discrimination",
       "tags": ["Comparative cognition", "Neuroethology"]
     },
@@ -74,7 +78,8 @@
       "type": "Literature Review",
       "category": "research",
       "year": "2025",
-      "file": "documents/research/Ratio_Cognition_Literature_Review.pdf",
+      "url": "https://github.com/harshithroshankrishnakumarug2023-ops/zebrafish-quantity-discrimination/blob/main/Ratio_Cognition_Literature_Review.pdf",
+      "repository": "https://github.com/harshithroshankrishnakumarug2023-ops/zebrafish-quantity-discrimination",
       "project": "zebrafish-quantity-discrimination",
       "tags": ["Comparative cognition"]
     },
@@ -84,7 +89,8 @@
       "type": "Literature Review",
       "category": "research",
       "year": "2025",
-      "file": "documents/research/Image_Based_Sexual_Abuse_Literature_Review.pdf",
+      "url": "https://github.com/harshithroshankrishnakumarug2023-ops/image-based-sexual-abuse/blob/main/Image_Based_Sexual_Abuse_Literature_Review.pdf",
+      "repository": "https://github.com/harshithroshankrishnakumarug2023-ops/image-based-sexual-abuse",
       "tags": ["Co-authored", "Coursework"]
     },
     {
@@ -93,7 +99,8 @@
       "type": "Zine",
       "category": "writing",
       "year": "2026",
-      "file": "documents/writing/Image_Based_Sexual_Abuse_Zine.pdf",
+      "url": "https://github.com/harshithroshankrishnakumarug2023-ops/image-based-sexual-abuse/blob/main/Image_Based_Sexual_Abuse_Zine.pdf",
+      "repository": "https://github.com/harshithroshankrishnakumarug2023-ops/image-based-sexual-abuse",
       "tags": ["Science communication", "Co-authored"]
     },
     {
@@ -102,7 +109,8 @@
       "type": "Handbook Entry",
       "category": "writing",
       "year": "2025",
-      "file": "documents/writing/CSBC_Optimism_Bias_Handbook.pdf",
+      "url": "https://github.com/harshithroshankrishnakumarug2023-ops/coursework/blob/main/CSBC_Optimism_Bias_Handbook.pdf",
+      "repository": "https://github.com/harshithroshankrishnakumarug2023-ops/coursework",
       "tags": ["Science communication"]
     },
     {
@@ -111,7 +119,8 @@
       "type": "Essay",
       "category": "writing",
       "year": "2024",
-      "file": "documents/writing/DAST-10_Cultural_Adaptation_Essay.pdf",
+      "url": "https://github.com/harshithroshankrishnakumarug2023-ops/coursework/blob/main/DAST-10_Cultural_Adaptation_Essay.pdf",
+      "repository": "https://github.com/harshithroshankrishnakumarug2023-ops/coursework",
       "tags": ["Coursework", "Psychometrics"]
     },
     {
@@ -120,7 +129,8 @@
       "type": "Term Paper",
       "category": "other",
       "year": "2025",
-      "file": "documents/other/Zebrafish_Memory_Term_Paper.pdf",
+      "url": "https://github.com/harshithroshankrishnakumarug2023-ops/coursework/blob/main/Zebrafish_Memory_Term_Paper.pdf",
+      "repository": "https://github.com/harshithroshankrishnakumarug2023-ops/coursework",
       "tags": ["Coursework"]
     },
     {
@@ -129,7 +139,8 @@
       "type": "Laboratory Record",
       "category": "other",
       "year": "2025",
-      "file": "documents/other/Biosignals_to_Wellbeing_Practical_Record.pdf",
+      "url": "https://github.com/harshithroshankrishnakumarug2023-ops/coursework/blob/main/Biosignals_to_Wellbeing_Practical_Record.pdf",
+      "repository": "https://github.com/harshithroshankrishnakumarug2023-ops/coursework",
       "tags": ["Coursework", "Biosignals"]
     }
   ]

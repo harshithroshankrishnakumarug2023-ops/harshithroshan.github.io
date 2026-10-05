@@ -1,21 +1,28 @@
 {
   "_readme": "WRITING PAGE. Entries are grouped by category in the order listed below. To add a piece of writing: add an entry with 'category' set to one of the ids, plus a title, date, type and either a url or a file (for PDFs stored in public/documents/writing/).",
-
   "intro": [
     "Writing that is not part of a publication: literature reviews, course work, and explanations of psychological concepts for a general audience."
   ],
-
   "emptyState": "Selected academic and public writing will be listed here as it becomes available.",
-
   "categories": [
-    { "id": "academic", "title": "Academic Writing" },
-    { "id": "science-communication", "title": "Science Communication" },
-    { "id": "public", "title": "Public Writing" },
-    { "id": "coursework", "title": "Coursework" }
+    {
+      "id": "academic",
+      "title": "Academic Writing"
+    },
+    {
+      "id": "science-communication",
+      "title": "Science Communication"
+    },
+    {
+      "id": "public",
+      "title": "Public Writing"
+    },
+    {
+      "id": "coursework",
+      "title": "Coursework"
+    }
   ],
-
   "_entryShape": "{\"category\": \"academic\", \"title\": \"Title of the piece\", \"date\": \"2026\", \"type\": \"Literature review\", \"publication\": \"Course, Institution\", \"description\": \"One or two sentences.\", \"url\": \"https://…\", \"file\": \"\"}",
-
   "entries": [
     {
       "category": "public",
@@ -33,7 +40,8 @@
       "type": "Literature review",
       "publication": "PSY-3045: Violence as a Human Behaviour, Ashoka University",
       "description": "Co-authored review of how image-based sexual abuse appears in Reddit posts, drawing on survivor accounts alongside research on psychological impact, perpetrator motivation and legal response.",
-      "file": "documents/research/Image_Based_Sexual_Abuse_Literature_Review.pdf"
+      "url": "https://github.com/harshithroshankrishnakumarug2023-ops/image-based-sexual-abuse/blob/main/Image_Based_Sexual_Abuse_Literature_Review.pdf",
+      "repository": "https://github.com/harshithroshankrishnakumarug2023-ops/image-based-sexual-abuse"
     },
     {
       "category": "science-communication",
@@ -42,7 +50,8 @@
       "type": "Zine",
       "publication": "Image-based sexual abuse awareness zine",
       "description": "A student zine on image-based sexual abuse: what it is, how survivors are affected, what the law currently provides, and where to report and find support. Built from Reddit posts and research papers collected during the literature review.",
-      "file": "documents/writing/Image_Based_Sexual_Abuse_Zine.pdf"
+      "url": "https://github.com/harshithroshankrishnakumarug2023-ops/image-based-sexual-abuse/blob/main/Image_Based_Sexual_Abuse_Zine.pdf",
+      "repository": "https://github.com/harshithroshankrishnakumarug2023-ops/image-based-sexual-abuse"
     },
     {
       "category": "science-communication",
@@ -51,7 +60,8 @@
       "type": "Handbook entry",
       "publication": "A–Z of Behavioral Science, Centre for Social & Behavioral Change",
       "description": "An entry on optimism bias for a behavioral science handbook written for a general audience.",
-      "file": "documents/writing/CSBC_Optimism_Bias_Handbook.pdf"
+      "url": "https://github.com/harshithroshankrishnakumarug2023-ops/coursework/blob/main/CSBC_Optimism_Bias_Handbook.pdf",
+      "repository": "https://github.com/harshithroshankrishnakumarug2023-ops/coursework"
     },
     {
       "category": "coursework",
@@ -60,7 +70,8 @@
       "type": "Essay",
       "publication": "PSY-IS-4158: Validation for Substance Abuse Scale for Indian Population, Ashoka University",
       "description": "A week 8 essay on why a substance-use screening instrument cannot simply be translated: stigma, gender, and the social meaning of the questions all change what respondents will honestly report.",
-      "file": "documents/writing/DAST-10_Cultural_Adaptation_Essay.pdf"
+      "url": "https://github.com/harshithroshankrishnakumarug2023-ops/coursework/blob/main/DAST-10_Cultural_Adaptation_Essay.pdf",
+      "repository": "https://github.com/harshithroshankrishnakumarug2023-ops/coursework"
     },
     {
       "category": "coursework",
@@ -69,7 +80,8 @@
       "type": "Term paper",
       "publication": "Ashoka University",
       "description": "A summary and critical reading of work on synaptic changes accompanying memory formation in larval zebrafish.",
-      "file": "documents/other/Zebrafish_Memory_Term_Paper.pdf"
+      "url": "https://github.com/harshithroshankrishnakumarug2023-ops/coursework/blob/main/Zebrafish_Memory_Term_Paper.pdf",
+      "repository": "https://github.com/harshithroshankrishnakumarug2023-ops/coursework"
     },
     {
       "category": "coursework",
@@ -78,7 +90,8 @@
       "type": "Laboratory record",
       "publication": "PSY-3027 / BIO-3414, Ashoka University",
       "description": "Practical records for pulse and ECG recording with a PowerLab, galvanic skin response, and eye-tracking: principle, apparatus, method and observations for each.",
-      "file": "documents/other/Biosignals_to_Wellbeing_Practical_Record.pdf"
+      "url": "https://github.com/harshithroshankrishnakumarug2023-ops/coursework/blob/main/Biosignals_to_Wellbeing_Practical_Record.pdf",
+      "repository": "https://github.com/harshithroshankrishnakumarug2023-ops/coursework"
     }
   ]
 }

@@ -7,7 +7,23 @@ Built as a **static site** and deployed to **GitHub Pages**. No backend, no
 database, no build server, no paid services, no third-party JavaScript.
 
 - **Live site:** `https://harshithroshankrishnakumarug2023-ops.github.io/harshithroshan.github.io/`
-- **Repository:** `https://github.com/harshithroshankrishnakumarug2023-ops/harshithroshan.github.io`
+- **This repository:** `https://github.com/harshithroshankrishnakumarug2023-ops/harshithroshan.github.io`
+
+### Where things live
+
+This repository holds the website and nothing else. Every project keeps its
+materials in its own repository, and the site links straight to the files there.
+
+| Repository | Holds |
+| --- | --- |
+| `harshithroshankrishnakumarug2023-ops` | the GitHub profile README |
+| `thesis-inhibitory-control` | the ICSSR research proposal |
+| `eyes-on-the-task` | the project report and stimulus sheets |
+| `zebrafish-quantity-discrimination` | the ideation document and literature review |
+| `image-based-sexual-abuse` | the literature review and the awareness zine |
+| `coursework` | handbook entry, DAST-10 essay, term paper, lab record |
+
+Only the resume is stored in this repository, because the site serves it.
 
 ---
 
@@ -154,14 +170,8 @@ update `baseUrl` in `content/site.json` to `https://yourdomain.com/`.
 │       └── <your-project>.json
 │
 ├── public/                      # static files, copied verbatim to the site root
-│   ├── documents/               #   your PDFs and other files
-│   │   ├── resume/
-│   │   ├── research/
-│   │   ├── proposals/
-│   │   ├── writing/
-│   │   └── other/
-│   │       # a category needs both a folder here and an entry in
-│   │       # content/documents.json → "categories"
+│   ├── documents/               #   files hosted by this site (your resume)
+│   │   └── resume/
 │   ├── images/
 │   └── favicon.svg
 │
@@ -345,21 +355,13 @@ stored in `public/documents/writing/`.
 
 ## 11. Adding a PDF or other document
 
-Two steps, and the document appears in the library with working View and
-Download buttons.
+Each project keeps its own repository, so most documents are **not** stored in
+this one. An entry points either at a file in `public/` (`file`) or at a document
+hosted in another repository (`url`).
 
-**Step 1 — put the file in the right folder** under `public/documents/`:
-
-| Folder | For |
-| --- | --- |
-| `resume/` | your CV / resume |
-| `research/` | papers, reports, manuscripts, datasets |
-| `proposals/` | research proposals, protocols, preregistrations |
-| `writing/` | written work not published elsewhere |
-| `other/` | anything else |
-
-Add a new category by creating the folder **and** adding it to
-`content/documents.json` → `categories`.
+**Step 1 — put the file somewhere it can be reached from.** Either in
+`public/documents/` if this site should serve it, or in the project's own GitHub
+repository.
 
 **Step 2 — add an entry** to `content/documents.json`:
 
@@ -370,26 +372,32 @@ Add a new category by creating the folder **and** adding it to
   "type": "Research Proposal",
   "category": "proposals",
   "year": "2026",
-  "file": "documents/proposals/ICSSR_Thesis_Research_Proposal.pdf",
+  "url": "https://github.com/OWNER/REPO/blob/main/FILE.pdf",
+  "repository": "https://github.com/OWNER/REPO",
   "tags": ["Undergraduate thesis"],
   "project": "childhood-maltreatment-inhibitory-control"
 }
 ```
 
-- `category` should match the folder name.
-- `file` is the path **inside `public/`** — this is the single most common
-  mistake; the build will tell you if the path does not exist.
+- `url` is a full external address; `file` is the path **inside `public/`** —
+  this is the single most common mistake, and the build will tell you if the
+  path does not exist. Use one or the other, not both.
+- `repository` is optional and adds a *Repository* button next to the document.
+- `category` is any id from `content/documents.json` → `categories`. It is a
+  filter label and does not need a matching folder.
 - `type`, `year`, `tags` are shown in the listing and can be filtered.
 - `project` links the document to a research project (optional).
 
-**View versus Download.** PDFs and images get both buttons: *View* opens the
-file in a new browser tab (so it can be read without downloading), *Download*
-saves it. Other file types — DOCX, PPTX, XLSX, CSV, TXT, ZIP, PsychoPy
-experiment files, code, datasets — get a *Download* button only. No fake
-previews are invented for files a browser cannot display.
+**View versus Download.** A document in `public/` gets both buttons: *View*
+opens it in a new browser tab, *Download* saves it. Other file types — DOCX,
+PPTX, XLSX, CSV, TXT, ZIP, PsychoPy experiment files, code, datasets — get a
+*Download* button only. No fake previews are invented for files a browser
+cannot display. An external `url` gets a single *View* button, since GitHub
+decides how it opens.
 
 You can also link documents from a research project by adding them to that
-project's `documents` list in its JSON file.
+project's `documents` list in its JSON file, with `url` for a document in the
+project's repository.
 
 ---
 

@@ -49,18 +49,31 @@ def link_row(links: list) -> str:
 
 
 def document_links(doc: dict, depth: int, *, label_prefix: str = "") -> list:
-    """Turn one entry of the document library into a list of links."""
+    """Turn one entry of the document library into a list of links.
+
+    An entry points either at a file in public/ ("file") or at a document hosted
+    elsewhere ("url", used for anything that lives in its own repository).
+    """
     file_path = str(doc.get("file") or "").strip()
-    if not file_path:
+    external_url = str(doc.get("url") or "").strip()
+    if not file_path and not external_url:
         return []
+    prefix = f"{label_prefix} " if label_prefix else ""
+    repository = str(doc.get("repository") or "").strip()
+    repo_link = (
+        [{"label": f"{prefix}Repository", "href": repository, "external": True}] if repository else []
+    )
+
+    if external_url and not file_path:
+        return [{"label": f"{prefix}View", "href": external_url, "external": True}] + repo_link
+
     href = rel(depth, file_path)
     name = file_path.rsplit("/", 1)[-1]
-    prefix = f"{label_prefix} " if label_prefix else ""
     links = []
     if is_viewable(file_path):
         links.append({"label": f"{prefix}View", "href": href, "external": True})
     links.append({"label": f"{prefix}Download", "href": href, "download": True, "title": name})
-    return links
+    return links + repo_link
 
 
 def document_row(doc: dict, depth: int) -> str:
@@ -74,15 +87,19 @@ def document_row(doc: dict, depth: int) -> str:
     meta = " · ".join(part for part in meta_parts if part)
     tags = [str(tag).strip() for tag in doc.get("tags", []) if str(tag).strip()]
     file_path = str(doc.get("file") or "").strip()
-    href = rel(depth, file_path) if file_path else ""
+    external_url = str(doc.get("url") or "").strip()
+    href = rel(depth, file_path) if file_path else external_url
 
     # A small chip showing the file format, e.g. PDF or DOCX.
-    extension = extension_of(file_path).lstrip(".").upper() if file_path else ""
+    extension = extension_of(href).lstrip(".").upper() if href else ""
     badge = f'<span class="doc-badge">{esc(extension)}</span>' if extension else ""
     meta_html = f'<p class="doc-meta">{badge}{esc(meta)}</p>' if (badge or meta) else ""
 
+    # A document hosted in another repository opens in a new tab; a local file
+    # stays in the page so the browser's PDF viewer is used.
+    open_in_new_tab = ' target="_blank" rel="noopener noreferrer"' if external_url and not file_path else ""
     title_html = (
-        f'<h3 class="doc-title"><a class="text-link" href="{esc(href)}">{esc(doc.get("title", ""))}</a></h3>'
+        f'<h3 class="doc-title"><a class="text-link" href="{esc(href)}"{open_in_new_tab}>{esc(doc.get("title", ""))}</a></h3>'
         if href
         else f'<h3 class="doc-title">{esc(doc.get("title", ""))}</h3>'
     )
@@ -736,8 +753,12 @@ def writing_page(content: dict, depth: int) -> str:
                             "external": bool(entry.get("url")) or is_viewable(str(entry.get("file") or "")),
                         }
                     )
-                if entry.get("url"):
-                    links.append({"label": "Source", "href": str(entry["url"]), "external": True})
+                # resolve_link already points at "url", so a separate Source link
+                # would duplicate it. The repository is a different place, so it
+                # gets its own link.
+                repository = str(entry.get("repository") or "").strip()
+                if repository:
+                    links.append({"label": "Repository", "href": repository, "external": True})
                 items.append(
                     f'<li class="entry"><p class="entry-meta">{esc(meta)}</p>'
                     f'<h3 class="entry-title plain">{esc(str(entry.get("title", "")))}</h3>'

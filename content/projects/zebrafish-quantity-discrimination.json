@@ -44,22 +44,27 @@
 
   "currentStatus": "Completed. Findings contributed to a publication proposal.",
 
-  "_documents": "Materials linked from the project page. 'file' is a path inside public/. Any file type can be linked — PDF, DOCX, PPTX, XLSX, CSV, TXT, ZIP or code. Omit 'file' for a link you do not want to publish yet.",
+  "_documents": "Materials linked from the project page. Use 'url' for a document hosted in this project's repository, or 'file' for a path inside public/. Omit both for a link you do not want to publish yet.",
   "documents": [
     {
       "label": "Ideation document",
       "type": "PDF",
-      "file": "documents/research/Zebrafish_Quantity_Discrimination_Ideation.pdf"
+      "url": "https://github.com/harshithroshankrishnakumarug2023-ops/zebrafish-quantity-discrimination/blob/main/Zebrafish_Quantity_Discrimination_Ideation.pdf"
     },
     {
       "label": "Literature review",
       "type": "PDF",
-      "file": "documents/research/Ratio_Cognition_Literature_Review.pdf"
+      "url": "https://github.com/harshithroshankrishnakumarug2023-ops/zebrafish-quantity-discrimination/blob/main/Ratio_Cognition_Literature_Review.pdf"
     }
   ],
 
   "_externalLinks": "Public repositories, pre-registrations, code. Same shape as documents, with 'url' instead of 'file'.",
-  "externalLinks": [],
+  "externalLinks": [
+    {
+      "label": "Project repository",
+      "url": "https://github.com/harshithroshankrishnakumarug2023-ops/zebrafish-quantity-discrimination"
+    }
+  ],
 
   "_references": "Optional. Cite as: {\"authors\": \"Surname, A. A., & Surname, B. B. (Year).\", \"reference\": \"Title of the work. Journal, volume(issue), pages. https://doi.org/xxxxx\"}",
   "references": []
