@@ -1,0 +1,66 @@
+{
+  "_readme": "RESEARCH PROJECT. One file per project in this folder; the filename is irrelevant because the 'slug' field sets the URL (/research/<slug>/). Files whose name starts with an underscore are ignored, so '_template.json' is a safe starting point. Delete any field you do not need — empty fields are simply not displayed. Text in [square brackets] is a placeholder: replace it with your own information.",
+
+  "slug": "zebrafish-quantity-discrimination",
+  "title": "Quantity Discrimination in Zebrafish",
+  "year": "2025",
+  "status": "Research Assistantship, Neuroethology Lab",
+
+  "short": "Experimental work on how larval zebrafish discriminate between quantities, and whether they apply learned arithmetic-like rules.",
+
+  "description": [
+    "This project looks at numerical cognition in larval zebrafish. Quantity discrimination is well documented across animal taxa; whether animals can go further and apply learned rules to new quantities — adding or subtracting according to an abstract symbol — is a harder question.",
+    "I developed and refined the paradigms for this work, including a dot-splitting task and a ratio-comparison task in a T-maze, and built the apparatus and visual stimuli used to run them."
+  ],
+
+  "researchQuestion": "Can larval zebrafish discriminate between quantities, and do their choices follow a ratio rule rather than continuous cues such as surface area?",
+
+  "background": [
+    "Fish are capable of non-symbolic numerosity cognition: they discriminate larger from smaller shoals, and their accuracy is ratio-dependent, particularly at higher quantities, consistent with an approximate number system.",
+    "The complication is that fish also use non-numerical cues — surface area, density and other continuous variables. The behavioral literature disagrees about how much of a fish's apparent numerosity performance is numerical rather than perceptual.",
+    "A recent line of work in cichlids and stingrays has shown that fish can learn to associate abstract visual symbols with +1 and –1 operations and then apply those rules correctly to novel quantities. That is proto-arithmetic capacity, and it is what makes this work interesting to pursue.",
+    "A review of 15+ studies on ratio and multiplicative cognition, presented to the lab, fed into a publication proposal."
+  ],
+
+  "focus": ["Numerical cognition", "Comparative cognition", "Behavioral methodology"],
+  "methods": ["T-maze ratio comparison", "Dot-splitting paradigm", "Behavioral observation", "Literature synthesis"],
+  "skills": ["Apparatus construction", "Stimulus preparation", "Behavioral coding (BORIS)"],
+
+  "institution": "Neuroethology Lab, Ashoka University",
+  "role": "Paradigm development, apparatus and stimulus construction, behavioral trials, data coding",
+  "supervisor": "[Supervisor]",
+  "collaborators": [],
+
+  "method": {
+    "participants": "Larval zebrafish (Danio rerio).",
+    "design": "[Design — e.g. within-subject choice task with habituation and reversal phases]",
+    "measures": "[Measures — choice latency, preference for larger vs smaller quantities]",
+    "stimuli": "Dot arrays varying in number, dot size and dot shape, so that continuous perceptual cues could be varied independently of quantity.",
+    "task": "Ratio comparison in a T-maze: the fish chooses between two differently sized arrays; a dot-splitting task presents equal totals as differently sized arrays.",
+    "procedure": "[Procedure — habituation, trial structure, and how a choice is scored]",
+    "software": ["BORIS (behavioral coding)", "Custom stimulus generation and apparatus control"],
+    "analysis": "Choice proportions across arrays, testing whether preference follows a ratio rule rather than absolute number or surface area."
+  },
+
+  "currentStatus": "Completed. Findings contributed to a publication proposal.",
+
+  "_documents": "Materials linked from the project page. 'file' is a path inside public/. Any file type can be linked — PDF, DOCX, PPTX, XLSX, CSV, TXT, ZIP or code. Omit 'file' for a link you do not want to publish yet.",
+  "documents": [
+    {
+      "label": "Ideation document",
+      "type": "PDF",
+      "file": "documents/research/Zebrafish_Quantity_Discrimination_Ideation.pdf"
+    },
+    {
+      "label": "Literature review",
+      "type": "PDF",
+      "file": "documents/research/Ratio_Cognition_Literature_Review.pdf"
+    }
+  ],
+
+  "_externalLinks": "Public repositories, pre-registrations, code. Same shape as documents, with 'url' instead of 'file'.",
+  "externalLinks": [],
+
+  "_references": "Optional. Cite as: {\"authors\": \"Surname, A. A., & Surname, B. B. (Year).\", \"reference\": \"Title of the work. Journal, volume(issue), pages. https://doi.org/xxxxx\"}",
+  "references": []
+}

@@ -26,13 +26,17 @@ def build() -> list[Path]:
     content = load_content()
     site = content["site"]
 
+    # Start from an empty dist/ so pages and files that were renamed or deleted
+    # do not survive as stale copies in the deployed site.
+    if DIST_DIR.is_dir():
+        shutil.rmtree(DIST_DIR, ignore_errors=True)
     DIST_DIR.mkdir(parents=True, exist_ok=True)
 
     built: list[tuple[str, str]] = [
         ("index.html", pages.home_page(content, depth=0)),
         ("about/index.html", pages.about_page(content, depth=1)),
         ("research/index.html", pages.research_page(content, depth=1)),
-        ("cv/index.html", pages.cv_page(content, depth=1)),
+        ("resume/index.html", pages.resume_page(content, depth=1)),
         ("writing/index.html", pages.writing_page(content, depth=1)),
         ("resources/index.html", pages.documents_page(content, depth=1)),
         ("contact/index.html", pages.contact_page(content, depth=1)),

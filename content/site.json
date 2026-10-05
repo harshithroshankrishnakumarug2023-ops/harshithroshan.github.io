@@ -3,9 +3,9 @@
 
   "name": "Harshith Roshan",
   "role": "Psychology Researcher",
-  "tagline": "Psychology Researcher · Cognitive & Clinical Psychology",
+  "tagline": "Psychology (Hons. with Research) · Attention, Emotion and Executive Function",
   "siteTitle": "Harshith Roshan — Psychology Researcher",
-  "siteDescription": "Personal academic website of Harshith Roshan — research interests, projects, publications, curriculum vitae and academic writing in cognitive and clinical psychology.",
+  "siteDescription": "Personal academic website of Harshith Roshan, undergraduate psychology researcher at Ashoka University — research projects, resume and academic writing in cognitive and clinical psychology.",
   "language": "en",
 
   "_baseUrl": "The live address of the deployed site, with a trailing slash. It is only used for canonical URLs, Open Graph tags and the sitemap — page links are relative, so the site works at any path. Current repo: harshithroshankrishnakumarug2023-ops/harshithroshan.github.io, which GitHub Pages serves from a sub-folder because the repository name is not the same as the account name.",
@@ -13,10 +13,10 @@
 
   "_links": "Leave a URL empty (\"\") and the site shows a clearly marked placeholder instead of a broken or invented link. Fill these in when you have them.",
   "links": {
-    "email": "",
+    "email": "roshanharshith@gmail.com",
     "scholar": "",
-    "linkedin": "",
-    "github": ""
+    "linkedin": "https://www.linkedin.com/in/harshith-roshan-4b0402294",
+    "github": "https://github.com/harshithroshankrishnakumarug2023-ops"
   },
 
   "_nav": "Navigation labels and destinations. Paths are relative to the site root, no leading slash.",
@@ -24,7 +24,7 @@
     { "label": "Home", "path": "" },
     { "label": "About", "path": "about/" },
     { "label": "Research", "path": "research/" },
-    { "label": "CV", "path": "cv/" },
+    { "label": "Resume", "path": "resume/" },
     { "label": "Writing", "path": "writing/" },
     { "label": "Resources", "path": "resources/" },
     { "label": "Contact", "path": "contact/" }

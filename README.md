@@ -1,6 +1,6 @@
 # Harshith Roshan — Academic Website
 
-A minimal, professional personal academic website: research portfolio, web CV,
+A minimal, professional personal academic website: research portfolio, web resume,
 publication and project archive, and document library.
 
 Built as a **static site** and deployed to **GitHub Pages**. No backend, no
@@ -18,7 +18,7 @@ database, no build server, no paid services, no third-party JavaScript.
 3. [Deploying to GitHub Pages](#4-deploying-to-github-pages)
 4. [Repository structure](#5-repository-structure)
 5. [Changing your personal information](#6-changing-your-personal-information)
-6. [Updating the CV](#7-updating-the-cv)
+6. [Updating the resume](#7-updating-the-resume)
 7. [Adding a research project](#8-adding-a-research-project)
 8. [Adding a publication](#9-adding-a-publication)
 9. [Adding writing](#10-adding-writing)
@@ -137,16 +137,15 @@ update `baseUrl` in `content/site.json` to `https://yourdomain.com/`.
 ├── build.py                     # the generator: python build.py
 ├── sitegen/                     # generator source
 │   ├── core.py                  #   content loading, URLs, layout components
-│   ├── pages.py                 #   one function per page
-│   └── pdfgen.py                #   optional helper that writes placeholder PDFs
+│   └── pages.py                 #   one function per page
 │
 ├── content/                     # ← YOU EDIT THIS (all text lives here)
 │   ├── site.json                #   name, tagline, navigation, links, footer
 │   ├── home.json                #   homepage introduction and research themes
-│   ├── about.json               #   biography, education, research experience
-│   ├── skills.json              #   skills (shared by About and CV)
+│   ├── about.json               #   biography, education, research & clinical experience
+│   ├── skills.json              #   skills (shared by About and Resume)
 │   ├── research.json            #   research page introduction
-│   ├── cv.json                  #   CV page sections and download link
+│   ├── resume.json              #   resume page sections and download link
 │   ├── documents.json           #   document library index
 │   ├── publications.json        #   publications and manuscripts
 │   ├── writing.json             #   academic and public writing
@@ -156,13 +155,13 @@ update `baseUrl` in `content/site.json` to `https://yourdomain.com/`.
 │
 ├── public/                      # static files, copied verbatim to the site root
 │   ├── documents/               #   your PDFs and other files
-│   │   ├── cv/
+│   │   ├── resume/
 │   │   ├── research/
 │   │   ├── proposals/
-│   │   ├── posters/
-│   │   ├── presentations/
 │   │   ├── writing/
 │   │   └── other/
+│   │       # a category needs both a folder here and an entry in
+│   │       # content/documents.json → "categories"
 │   ├── images/
 │   └── favicon.svg
 │
@@ -210,18 +209,19 @@ small conveniences:
 
 ---
 
-## 7. Updating the CV
+## 7. Updating the resume
 
-The web CV is assembled from three files:
+The web resume is assembled from three files:
 
-1. **`content/cv.json`** — CV-only sections (Research Experience, Publications,
-   Presentations, …), the download button, and the "Last updated" date.
+1. **`content/resume.json`** — resume-only sections (Research Experience, Clinical
+   Experience, Positions of Responsibility, Awards, …), the download button, and
+   the "Last updated" date.
 2. **`content/about.json`** — Education is taken from here, so it appears on
    both pages at once.
 3. **`content/projects/*.json`** — Research Projects are generated automatically.
 
-To add a CV entry, append an object to the relevant section in
-`content/cv.json`:
+To add a resume entry, append an object to the relevant section in
+`content/resume.json`:
 
 ```json
 {
@@ -247,8 +247,8 @@ To add a CV entry, append an object to the relevant section in
 
 Rules:
 
-- Sections appear **in the order they are listed** in `content/cv.json`, so you
-  can reorder or delete them freely.
+- Sections appear **in the order they are listed** in `content/resume.json`, so
+  you can reorder or delete them freely.
 - A section either pulls in shared content — `"source": "education"`,
   `"source": "projects"` or `"source": "skills"` — or holds its own `items`.
   This is why Education, Research Projects and Skills never fall out of sync
@@ -259,13 +259,15 @@ Rules:
   `emptyState` line.
 - `"showEducation"`, `"showProjects"` and `"showSkills"` at the top of the file
   switch those three shared sections off entirely.
-- Update `"lastUpdated"` (for example `"October 2026"`) whenever you edit the CV.
+- Update `"lastUpdated"` (for example `"October 2026"`) whenever you edit the
+  resume.
 
-### The CV PDF
+### The resume PDF
 
-Replace the file `public/documents/cv/harshith-roshan-cv.pdf` with your own PDF
-(keep the filename, or change `download.file` in `content/cv.json`). The file
-currently in the repository is a clearly marked placeholder.
+Replace the file `public/documents/resume/Harshith_Roshan_Resume.pdf` with a
+newer version of your resume PDF (keep the filename, or change `download.file` in
+`content/resume.json`). Keep only one current resume in the repository so there
+is never any doubt about which version is current.
 
 ---
 
@@ -281,7 +283,10 @@ currently in the repository is a clearly marked placeholder.
 6. Run `python build.py`.
 
 The project appears automatically on the research page, on the homepage if you
-set `"featured": true`, and on the CV page.
+set `"featured": true`, and on the resume page.
+
+If new information turns out to describe a project you already have, edit that
+project's JSON rather than creating a second file for it.
 
 Status is free text; useful values are `Conceptualization`, `Data collection`,
 `Analysis`, `Manuscript preparation`, `Completed`. Use whatever matches reality.
@@ -347,13 +352,14 @@ Download buttons.
 
 | Folder | For |
 | --- | --- |
-| `cv/` | curriculum vitae |
+| `resume/` | your CV / resume |
 | `research/` | papers, reports, manuscripts, datasets |
 | `proposals/` | research proposals, protocols, preregistrations |
-| `posters/` | conference posters |
-| `presentations/` | slides, talks |
 | `writing/` | written work not published elsewhere |
 | `other/` | anything else |
+
+Add a new category by creating the folder **and** adding it to
+`content/documents.json` → `categories`.
 
 **Step 2 — add an entry** to `content/documents.json`:
 
@@ -364,8 +370,8 @@ Download buttons.
   "type": "Research Proposal",
   "category": "proposals",
   "year": "2026",
-  "file": "documents/proposals/childhood-emotional-abuse-emotional-neglect-inhibitory-control.pdf",
-  "tags": ["Undergraduate Research"],
+  "file": "documents/proposals/ICSSR_Thesis_Research_Proposal.pdf",
+  "tags": ["Undergraduate thesis"],
   "project": "childhood-maltreatment-inhibitory-control"
 }
 ```
@@ -432,11 +438,11 @@ Everything visual lives at the top of **`src/styles/main.css`**:
 ### Images
 
 - **Portrait:** `content/about.json` → `"portrait"` → `"file"`. It currently
-  points at `images/portrait-placeholder.svg`, a neutral placeholder frame with
-  a silhouette and no invented face. To use a real photograph, drop the file
-  into `public/images/` and change the path. Delete the whole `portrait` block
-  to remove the image entirely; on wide screens it sits beside the biography,
-  and on phones it appears above it.
+  points at `images/portrait.jpg`. To use a different photograph, drop the file
+  into `public/images/` and change the path; resizing to about 960 px on the long
+  edge and saving as JPEG keeps the page fast. Delete the whole `portrait` block
+  to remove the image entirely; on wide screens it sits beside the biography, and
+  on phones it appears above it.
 - **Social preview image:** drop a **1200 × 630** PNG or JPG into
   `public/images/` and set `"ogImage"` in `content/site.json`. While it is
   empty, no `og:image` tag is emitted and the share card falls back to the page
@@ -470,35 +476,39 @@ project's `externalLinks` list instead.
 
 ---
 
-## 14. Before you publish — checklist
+## 14. Still to fill in — checklist
 
-The site currently contains **placeholders**, never invented facts. Anything in
-square brackets, and everything listed below, is meant to be replaced by you:
+Everything published so far came from your own documents. Nothing on the site is
+invented, and anything you have not supplied is either hidden or shown as an
+obvious `[bracketed]` placeholder. The items left to do:
 
-- [ ] `content/site.json` — email, Google Scholar, LinkedIn, GitHub URLs
-- [ ] Replace `public/documents/cv/harshith-roshan-cv.pdf` with your real CV
-- [ ] Replace the placeholder research proposal PDF in `public/documents/proposals/`
-- [ ] `content/about.json` — biography paragraphs, education dates, research
-      experience entries, `[your intended focus]`
+- [ ] `content/site.json` — Google Scholar profile URL (email, LinkedIn and
+      GitHub are already set)
 - [ ] `content/projects/childhood-maltreatment-inhibitory-control.json` —
-      participants, measures, design, stimuli, procedure, analysis, role,
-      supervisor, current status, background paragraph
-- [ ] `content/skills.json` — remove any skill that is not yours
-- [ ] `content/cv.json` — `lastUpdated`, and any sections you can fill in
-- [ ] `content/home.json` — the introduction and research themes, in your voice
-- [ ] Add a real photograph to `public/images/` and update `content/about.json`
-      → `portrait.file` (or delete the block to keep the placeholder away)
+      `procedure` and `analysis` in the `method` block
+- [ ] `content/projects/childhood-maltreatment-inhibitory-control.json` —
+      confirm the measures: your resume says **TAQ subscales + emotional
+      Go/No-Go**, the ICSSR proposal says **CTQ-SF + DASS-21**. The site
+      currently uses the resume wording.
+- [ ] `content/projects/zebrafish-quantity-discrimination.json` — `supervisor`,
+      `method.design`, `method.measures`, `method.procedure`
+- [ ] `content/publications.json` — add entries as papers are accepted or
+      submitted; until then the pages show a short empty state
+- [ ] `content/resume.json` — `lastUpdated`, whenever you revise the resume
 - [ ] Add a 1200 × 630 share image to `public/images/` and set `ogImage` in
       `content/site.json`
-- [ ] Review the project description and research question for accuracy; they
-      were written as neutral starting text, not as results
-- [ ] Confirm the placeholder PDFs are no longer referenced anywhere
+- [ ] Review the homepage introduction and research themes in
+      `content/home.json` — they were written from your resume, so adjust the
+      wording to your own voice
+- [ ] `content/skills.json` — remove any skill you would rather not claim
 
-To create another placeholder PDF later:
+### Large files
 
-```bash
-python -m sitegen.pdfgen "public/documents/posters/example.pdf" "Poster title"
-```
+`public/documents/writing/Image_Based_Sexual_Abuse_Zine.pdf` is about 79 MB and
+`public/documents/research/Eyes_on_the_Task_Stimulus_Sheets.pdf` about 8.8 MB.
+They are served fine by GitHub Pages, but they make the repository large and the
+zine is slow to open on a phone. If you would rather not carry them, delete the
+file and its entry in `content/documents.json`.
 
 ---
 
@@ -508,6 +518,13 @@ python -m sitegen.pdfgen "public/documents/posters/example.pdf" "Poster title"
 readable by anyone with the URL, and GitHub shows the raw file contents too.
 Unpublished manuscripts, participant data, consent forms, interview material or
 anything confidential should not be in this repository at all.
+
+Worked examples of what has been deliberately left out, so it does not get added
+by accident later: raw PsychoPy experiment folders and their trial data, image
+stimulus sets for the thesis and the eye-tracking study, coded adolescent
+referral data from the Family Journeys Co-Lab (de-identified, but still clinical
+material about real people), and any phone number. If you want a document
+published, add it to `public/documents/` deliberately.
 
 Controls available to you:
 

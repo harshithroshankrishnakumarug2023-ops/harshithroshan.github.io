@@ -2,28 +2,28 @@
   "_readme": "HOMEPAGE CONTENT. 'intro' paragraphs appear under your name. 'themes' are the research themes. 'featuredProject' must match a slug in content/projects/.",
 
   "intro": [
-    "I study how emotional and developmental experiences shape cognitive and psychological processes. My interests sit across cognitive and clinical psychology — attention, inhibitory control, emotional processing, and the childhood experiences that underlie later mental health.",
-    "My work is mostly experimental and quantitative: reaction-time paradigms, questionnaire research, and careful attention to research method."
+    "I study how attention and inhibitory control are affected by emotional experience, and how early adversity is carried forward into cognitive functioning. My work is experimental and quantitative — reaction-time paradigms, questionnaires and eye-tracking.",
+    "I am an undergraduate psychology researcher at Ashoka University, and have worked in developmental psychopathology, clinical psychology and comparative cognition."
   ],
 
   "_themes": "Three or four research themes. Keep each description to one or two sentences.",
   "themesHeading": "Research",
   "themes": [
     {
-      "title": "Clinical Psychology",
-      "text": "Psychological distress, childhood experiences, and the processes that shape mental health across the lifespan."
+      "title": "Cognitive Control",
+      "text": "Inhibitory control and attentional control: how people withhold a prepared response, and how much that ability depends on what else is competing for attention."
     },
     {
-      "title": "Cognitive Psychology",
-      "text": "Attention, inhibitory control, working memory, and the ways emotional material interferes with ongoing cognitive performance."
+      "title": "Childhood Adversity",
+      "text": "Whether emotional abuse and emotional neglect relate to cognitive functioning in different ways, rather than as a single cumulative score."
     },
     {
-      "title": "Developmental & Environmental Factors",
-      "text": "How early-life experiences and social environments shape psychological and cognitive functioning later in life."
+      "title": "Clinical & Developmental Psychology",
+      "text": "Psychological distress, mental health assessment, and the developmental pathways that lead to them."
     },
     {
-      "title": "Experimental Psychology",
-      "text": "Behavioral experimentation, reaction-time paradigms, emotional stimuli, and the quantitative methods used to study them."
+      "title": "Measurement",
+      "text": "Getting at these constructs properly: adapting instruments across cultures, and prevalidating stimuli and items before they go into a study."
     }
   ],
 
@@ -34,7 +34,7 @@
   "publicationsEmpty": "Publications and manuscripts will be listed here as they become available.",
 
   "documentsHeading": "Documents",
-  "documentsText": "My curriculum vitae, research proposal and other academic materials are kept in one place, free to view and download.",
+  "documentsText": "My resume, research proposals, reports and academic writing are kept in one place, free to view and download.",
 
   "contactHeading": "Contact",
   "contactText": "I am interested in research collaborations, academic opportunities, and conversations around psychology and behavioral science."

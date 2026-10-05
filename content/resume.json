@@ -1,0 +1,135 @@
+{
+  "_readme": "RESUME PAGE. Sections appear in the order they are listed here, so you can reorder or delete them freely. Each section either pulls in shared content (\"source\": \"education\" | \"projects\" | \"skills\", taken from content/about.json, content/projects/ and content/skills.json) or holds its own items. A section with no items and no emptyState is not shown at all. To hide a section that currently only shows a placeholder, delete its emptyState line. Item shape: {\"title\": \"\", \"subtitle\": \"\", \"date\": \"\", \"body\": \"\", \"bullets\": [\"\"], \"links\": [{\"label\": \"\", \"file\": \"documents/...\" or \"url\": \"https://...\"}]}",
+
+  "heading": "Resume",
+  "intro": "A web version of my academic record. The same document is available as a PDF for use in applications.",
+
+  "lastUpdated": "October 2026",
+  "download": {
+    "label": "Download resume (PDF)",
+    "file": "documents/resume/Harshith_Roshan_Resume.pdf"
+  },
+
+  "showEducation": true,
+  "showProjects": true,
+  "showSkills": true,
+
+  "sections": [
+    { "id": "education", "source": "education", "title": "Education" },
+    {
+      "id": "research-experience",
+      "title": "Research Experience",
+      "items": [
+        {
+          "title": "Family Journeys Co-Lab — University of North Carolina at Chapel Hill",
+          "subtitle": "Research Assistant, Developmental Psychopathology",
+          "date": "January 2026 – May 2026",
+          "bullets": [
+            "Conducted abstract screening for a systematic review of the developmental internalizing pathway to substance use disorders, classifying 100+ papers in Covidence across six developmental components of the framework.",
+            "Participated in a campus seminar series on substance use disorders and its intersections.",
+            "Evaluated program data for 22 adolescents in the Reintegration Support Network, integrating referral, risk-assessment, mentor-interaction, evaluation and interview records into a 29-page final report."
+          ]
+        },
+        {
+          "title": "Neuroethology Lab — Ashoka University",
+          "subtitle": "Research Assistant, Quantitative Cognition in Zebrafish",
+          "date": "July 2025 – December 2025",
+          "bullets": [
+            "Developed experimental paradigms for zebrafish quantity discrimination, including a dot-splitting paradigm and a ratio-comparison task in a T-maze.",
+            "Built the apparatus and visual stimuli, ran 20+ behavioral trials, and coded behavioral data in BORIS.",
+            "Reviewed 15+ studies, presented the findings to the lab, and contributed to a publication proposal."
+          ]
+        },
+        {
+          "title": "Professor Naseer's Lab — Ashoka University",
+          "subtitle": "Research Intern, Scale Adaptation for Drug Abuse Screening",
+          "date": "August 2024 – December 2024",
+          "bullets": [
+            "Reviewed culturally adapted substance-use assessments to inform adaptation of the DAST-10 in Hindi, and refined the study design and methodology.",
+            "Drafted protocols and flowcharts for cross-cultural adaptation and psychometric validation, including complementary measures (ASSIST, PHQ-9, GAD-7).",
+            "Designed a Qualtrics survey on religious values and moral decision-making."
+          ],
+          "links": [
+            { "label": "Cultural adaptation essay", "file": "documents/writing/DAST-10_Cultural_Adaptation_Essay.pdf" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clinical-experience",
+      "title": "Clinical Experience",
+      "items": [
+        {
+          "title": "RELA Hospital and Institute",
+          "subtitle": "Clinical Psychology Intern",
+          "date": "June 2026 – July 2026",
+          "bullets": [
+            "Administered, scored and interpreted MoCA/MMSE assessments and conducted Mental Status Examinations for 5+ patients under supervision.",
+            "Joined clinical assessment and case discussions with clinical psychologists and psychiatrists on CBT, ACT, family and grief counseling.",
+            "Followed up with 20+ living liver donors by structured assessment calls to assess post-donation recovery.",
+            "Observed counseling and outpatient consultations across liver transplantation, neurological ICU, palliative care, and medical and radiation oncology."
+          ]
+        }
+      ]
+    },
+    { "id": "projects", "source": "projects", "title": "Research Projects" },
+    {
+      "id": "positions",
+      "title": "Positions of Responsibility",
+      "items": [
+        {
+          "title": "Gaming & Cognition (PSY-4022)",
+          "subtitle": "Teaching Assistant",
+          "date": "August 2026 – December 2026",
+          "bullets": [
+            "Ran office hours on course concepts and project ideas, and compiled supplementary resources.",
+            "Facilitated discussion sections alongside the Teaching Fellow and supported course projects on game development and game-based learning.",
+            "Graded quizzes and provided feedback on lectures."
+          ]
+        },
+        {
+          "title": "Ashoka Behavioral Insights Team",
+          "subtitle": "Head of Department / Chief Editor, The Nudgelet",
+          "date": "August 2025 – August 2026",
+          "body": "Led a 20+ member team publishing accessible articles on everyday phenomena, drawn from behavioral science research.",
+          "bullets": [
+            "Authored \"Are You in Love, or Just Afraid of Being Single?\" after designing and analyzing a campus survey of 37 responses on relationship FOMO.",
+            "Wrote entries on optimism bias and the voluntariness principle for the Centre for Social & Behavioral Change's A–Z of Behavioral Science handbook."
+          ],
+          "links": [
+            { "label": "Read the article", "url": "https://medium.com/the-nudgelet/are-you-in-love-or-just-afraid-of-being-single-d25945627cd2" },
+            { "label": "Optimism bias entry", "file": "documents/writing/CSBC_Optimism_Bias_Handbook.pdf" }
+          ]
+        },
+        {
+          "title": "Ashoka Debating Union",
+          "subtitle": "President",
+          "date": "August 2024 – June 2025",
+          "bullets": [
+            "Led a community of 80+ debaters, organizing mock debates, inter-varsity competitions and training sessions with the Indian Debating League.",
+            "Debated in 25+ parliamentary rounds as speaker and adjudicator."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "awards",
+      "title": "Awards",
+      "items": [
+        {
+          "title": "Dean's List Student",
+          "subtitle": "Ashoka University",
+          "date": "January 2024 – Present",
+          "body": "Named to the Dean's List every semester to date."
+        },
+        {
+          "title": "School Topper / Head Boy",
+          "subtitle": "The PSBB Millennium School, Chennai",
+          "date": "March 2023",
+          "body": "Ranked first in class with a perfect score in Biology; president of the Model UN Society and a member of disciplinary committees."
+        }
+      ]
+    },
+    { "id": "skills", "source": "skills", "title": "Skills & Software" }
+  ]
+}

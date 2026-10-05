@@ -1,5 +1,5 @@
 {
-  "_readme": "DOCUMENT LIBRARY. To add a document: (1) put the file in the matching folder inside public/documents/, (2) add an entry below. It appears in the library automatically. 'category' should match the folder name (cv, research, proposals, posters, presentations, writing, other). Set 'private' to true for anything that must stay off the public site — the entry is then removed from the library entirely (but remember: any file in public/ is still publicly reachable by direct URL, so leave such files out of the repository altogether).",
+  "_readme": "DOCUMENT LIBRARY. To add a document: (1) put the file in the matching folder inside public/documents/, (2) add an entry below. It appears in the library automatically. 'category' should match the folder name (resume, research, proposals, posters, presentations, writing, other). Set 'private' to true for anything that must stay off the public site — the entry is then removed from the library entirely (but remember: any file in public/ is still publicly reachable by direct URL, so leave such files out of the repository altogether).",
 
   "intro": [
     "Academic documents are grouped by type and can be viewed in the browser or downloaded directly. Files are stored in this repository and served as static files."
@@ -7,11 +7,9 @@
 
   "_categories": "Category labels, matching the folders in public/documents/. Remove a category here and its filter option disappears.",
   "categories": [
-    { "id": "cv", "label": "CV" },
+    { "id": "resume", "label": "Resume" },
     { "id": "research", "label": "Research" },
     { "id": "proposals", "label": "Proposals" },
-    { "id": "posters", "label": "Posters" },
-    { "id": "presentations", "label": "Presentations" },
     { "id": "writing", "label": "Writing" },
     { "id": "other", "label": "Other" }
   ],
@@ -21,24 +19,118 @@
   "_documentShape": "{\"title\": \"\", \"description\": \"\", \"type\": \"PDF\", \"category\": \"research\", \"year\": \"2026\", \"file\": \"documents/research/example.pdf\", \"tags\": [], \"project\": \"<project slug, optional>\", \"featured\": false, \"private\": false}",
   "documents": [
     {
-      "title": "Curriculum Vitae",
-      "description": "Academic CV covering education, research experience, projects and skills.",
-      "type": "PDF",
-      "category": "cv",
+      "title": "Resume",
+      "description": "Education, research and clinical experience, projects, positions of responsibility and skills.",
+      "type": "Curriculum vitae",
+      "category": "resume",
       "year": "2026",
-      "file": "documents/cv/harshith-roshan-cv.pdf",
-      "tags": ["Curriculum vitae"],
+      "file": "documents/resume/Harshith_Roshan_Resume.pdf",
+      "tags": ["Resume", "Curriculum vitae"],
       "featured": true
     },
     {
-      "title": "Childhood Emotional Abuse, Emotional Neglect, and Inhibitory Control",
-      "description": "A research proposal examining the relationship between childhood psychological maltreatment and inhibitory control in emerging adults.",
+      "title": "Psychologically Harmful Caregiving, Emotional Abuse and Emotional Neglect: Differential Associations with Inhibitory Control in Indian Emerging Adults",
+      "description": "Full ICSSR research proposal for the undergraduate thesis, including the theoretical framework, literature review, hypotheses and method.",
       "type": "Research Proposal",
       "category": "proposals",
       "year": "2026",
-      "file": "documents/proposals/childhood-emotional-abuse-emotional-neglect-inhibitory-control.pdf",
+      "file": "documents/proposals/ICSSR_Thesis_Research_Proposal.pdf",
       "project": "childhood-maltreatment-inhibitory-control",
-      "tags": ["Undergraduate Research"]
+      "tags": ["Undergraduate thesis", "ICSSR"]
+    },
+    {
+      "title": "Eyes on the Task: How Difficulty and Distractor Relevance Influence Attention in University Students",
+      "description": "Final group report for the eye-tracking study, with method, statistical results, discussion and limitations.",
+      "type": "Research Report",
+      "category": "research",
+      "year": "2026",
+      "file": "documents/research/Eyes_on_the_Task_Report.pdf",
+      "project": "eyes-on-the-task",
+      "tags": ["Eye tracking", "Attention"]
+    },
+    {
+      "title": "Eyes on the Task: Stimulus Sheets",
+      "description": "Participant instruction and task sheets as presented during the eye-tracking experiment.",
+      "type": "Stimulus Materials",
+      "category": "research",
+      "year": "2026",
+      "file": "documents/research/Eyes_on_the_Task_Stimulus_Sheets.pdf",
+      "project": "eyes-on-the-task",
+      "tags": ["Eye tracking", "Materials"]
+    },
+    {
+      "title": "Zebrafish Quantity Discrimination: Ideation Document",
+      "description": "Experimental design document for the dot-splitting and ratio-comparison T-maze tasks.",
+      "type": "Research Proposal",
+      "category": "research",
+      "year": "2025",
+      "file": "documents/research/Zebrafish_Quantity_Discrimination_Ideation.pdf",
+      "project": "zebrafish-quantity-discrimination",
+      "tags": ["Comparative cognition", "Neuroethology"]
+    },
+    {
+      "title": "Ratio / Multiplicative Cognition: Literature Review",
+      "description": "Review of numerosity and ratio cognition in fish, and what the findings imply for the lab's paradigms.",
+      "type": "Literature Review",
+      "category": "research",
+      "year": "2025",
+      "file": "documents/research/Ratio_Cognition_Literature_Review.pdf",
+      "project": "zebrafish-quantity-discrimination",
+      "tags": ["Comparative cognition"]
+    },
+    {
+      "title": "Exploring Image-Based Sexual Abuse Through Posts on Reddit",
+      "description": "Co-authored literature review on the psychological, social and legal dimensions of image-based sexual abuse, using Reddit posts as a corpus.",
+      "type": "Literature Review",
+      "category": "research",
+      "year": "2025",
+      "file": "documents/research/Image_Based_Sexual_Abuse_Literature_Review.pdf",
+      "tags": ["Co-authored", "Coursework"]
+    },
+    {
+      "title": "Behind the Screens: Whose Image Is It Really?",
+      "description": "A zine on image-based sexual abuse for a general audience: impact, perpetrator motivation, legal response, and reporting and support resources.",
+      "type": "Zine",
+      "category": "writing",
+      "year": "2026",
+      "file": "documents/writing/Image_Based_Sexual_Abuse_Zine.pdf",
+      "tags": ["Science communication", "Co-authored"]
+    },
+    {
+      "title": "Optimism Bias: Why We Think the Future Will Always Favour Us",
+      "description": "Entry on optimism bias for the Centre for Social & Behavioral Change's A–Z of Behavioral Science handbook.",
+      "type": "Handbook Entry",
+      "category": "writing",
+      "year": "2025",
+      "file": "documents/writing/CSBC_Optimism_Bias_Handbook.pdf",
+      "tags": ["Science communication"]
+    },
+    {
+      "title": "Cultural Adaptation of the DAST-10 in India",
+      "description": "Essay on the cultural, linguistic and contextual problems of adapting a substance-use screening scale to an Indian population.",
+      "type": "Essay",
+      "category": "writing",
+      "year": "2024",
+      "file": "documents/writing/DAST-10_Cultural_Adaptation_Essay.pdf",
+      "tags": ["Coursework", "Psychometrics"]
+    },
+    {
+      "title": "Regional Synapse Gain and Loss Accompany Memory Formation in Larval Zebrafish",
+      "description": "Term paper summarizing published work on synaptic change during memory formation.",
+      "type": "Term Paper",
+      "category": "other",
+      "year": "2025",
+      "file": "documents/other/Zebrafish_Memory_Term_Paper.pdf",
+      "tags": ["Coursework"]
+    },
+    {
+      "title": "Biosignals to Wellbeing: Practical Record",
+      "description": "Laboratory records for pulse and ECG recording, galvanic skin response and eye-tracking: principle, apparatus, method and observations.",
+      "type": "Laboratory Record",
+      "category": "other",
+      "year": "2025",
+      "file": "documents/other/Biosignals_to_Wellbeing_Practical_Record.pdf",
+      "tags": ["Coursework", "Biosignals"]
     }
   ]
 }

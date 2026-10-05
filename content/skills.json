@@ -1,34 +1,42 @@
 {
-  "_readme": "SKILLS — shared by the About page and the CV page. Only list skills you actually have. Each category has a title and an array of items.",
+  "_readme": "SKILLS — shared by the About page and the Resume page. Only list skills you actually have. Each category has a title and an array of items.",
 
   "heading": "Skills",
   "categories": [
     {
-      "title": "Research Methods",
-      "items": [
-        "Experimental design",
-        "Behavioral research",
-        "Literature review",
-        "Quantitative analysis",
-        "Psychometrics"
-      ]
-    },
-    {
       "title": "Software",
       "items": [
         "PsychoPy",
-        "jamovi",
+        "Jamovi",
+        "BORIS",
         "Covidence",
-        "Zotero"
+        "Qualtrics",
+        "G*Power",
+        "Tobii Pro Fusion",
+        "LabChart 8"
       ]
     },
     {
-      "title": "Methods & Techniques",
+      "title": "Methods",
       "items": [
         "Go/No-Go paradigms",
         "Reaction-time analysis",
+        "Eye tracking",
+        "ECG",
+        "Galvanic skin response",
         "Questionnaire research",
-        "Experimental psychology"
+        "Psychometrics",
+        "Structured interviews"
+      ]
+    },
+    {
+      "title": "Analysis",
+      "items": [
+        "Repeated-measures ANOVA",
+        "Qualitative coding",
+        "Behavioral observation coding",
+        "Power analysis",
+        "Systematic review screening"
       ]
     }
   ]

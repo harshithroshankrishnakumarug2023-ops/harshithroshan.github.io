@@ -160,7 +160,7 @@ def project_page(project: dict, site: dict, *, depth: int) -> str:
         ("Procedure", method.get("procedure", "")),
         ("Software", ", ".join(str(item) for item in method.get("software", []) if str(item).strip())),
     ]
-    analysis_row = [("Analysis", method.get("analysis", ""))]
+    analysis = str(method.get("analysis") or "").strip()
     detail_rows = [
         ("Institution", project.get("institution", "")),
         ("Role", project.get("role", "")),
@@ -216,7 +216,7 @@ def project_page(project: dict, site: dict, *, depth: int) -> str:
       {question_block}
       {section("Background", paragraphs(project.get("background", [])))}
       {section("Method", definition_list(method_rows))}
-      {section("Analysis", definition_list(analysis_row))}
+      {section("Analysis", f'<p class="prose-text">{rich_text(analysis)}</p>') if analysis else ""}
       {section("Project details", definition_list(detail_rows))}
       {status_block}
       {materials_block}
@@ -322,7 +322,7 @@ def home_page(content: dict, depth: int) -> str:
     project = content["projects_by_slug"].get(str(home.get("featuredProject") or ""))
 
     hero_links = [
-        {"label": "CV", "href": rel(depth, "cv/")},
+        {"label": "Resume", "href": rel(depth, "resume/")},
         {"label": "Research", "href": rel(depth, "research/")},
     ]
     for key in ("scholar", "linkedin", "email"):
@@ -420,6 +420,15 @@ def about_page(content: dict, depth: int) -> str:
         experience_inner = empty_state(about.get("experienceEmpty", ""))
     experience_block = section(about.get("experienceHeading", "Research experience"), experience_inner)
 
+    # Optional clinical section, same entry shape as the research experience above.
+    clinical = about.get("clinical", [])
+    clinical_block = ""
+    if clinical:
+        clinical_items = "".join(f'<li class="entry">{entry_summary(item, depth)}</li>' for item in clinical)
+        clinical_block = section(
+            about.get("clinicalHeading", "Clinical experience"), f'<ul class="entry-list">{clinical_items}</ul>'
+        )
+
     skills_block = skills_section(content["skills"], depth)
     goals_block = section(about.get("goalsHeading", "Current direction"), paragraphs(about.get("goals", [])))
 
@@ -430,10 +439,14 @@ def about_page(content: dict, depth: int) -> str:
     portrait_file = str(portrait_config.get("file") or "").strip()
     if portrait_file:
         caption = portrait_config.get("caption") or ""
+        # Intrinsic size keeps the layout stable before the image loads; give the
+        # real dimensions of your file if it is not 480x600.
+        width = int(portrait_config.get("width") or 480)
+        height = int(portrait_config.get("height") or 600)
         portrait_html = (
             f'<figure class="portrait">'
             f'<img src="{esc(rel(depth, portrait_file))}" alt="{esc(portrait_config.get("alt", ""))}"'
-            f' width="480" height="600" decoding="async">'
+            f' width="{width}" height="{height}" decoding="async">'
             + (f"<figcaption>{rich_text(caption)}</figcaption>" if caption else "")
             + "</figure>"
         )
@@ -449,6 +462,7 @@ def about_page(content: dict, depth: int) -> str:
       {section(about.get("bioHeading", "About me"), intro_html)}
       {education_block}
       {experience_block}
+      {clinical_block}
       {skills_block}
       {goals_block}
     """
@@ -544,39 +558,39 @@ def research_page(content: dict, depth: int) -> str:
     )
 
 
-def cv_page(content: dict, depth: int) -> str:
+def resume_page(content: dict, depth: int) -> str:
     site = content["site"]
     about = content["about"]
-    cv = content["cv"]
+    resume = content["resume"]
 
-    download = cv.get("download") or {}
+    download = resume.get("download") or {}
     download_href = resolve_link(depth, download)
     download_html = (
-        button(esc(download.get("label", "Download CV (PDF)")), download_href, variant="btn btn-primary")
+        button(esc(download.get("label", "Download resume (PDF)")), download_href, variant="btn btn-primary")
         if download_href
-        else '<span class="ph">[Download CV (PDF) — add the file path in content/cv.json]</span>'
+        else '<span class="ph">[Download resume (PDF) — add the file path in content/resume.json]</span>'
     )
     meta_bits = []
-    if cv.get("lastUpdated"):
-        meta_bits.append(f'<p class="cv-meta">Last updated: {esc(str(cv["lastUpdated"]))}</p>')
+    if resume.get("lastUpdated"):
+        meta_bits.append(f'<p class="resume-meta">Last updated: {esc(str(resume["lastUpdated"]))}</p>')
 
     sections = []
-    for entry in cv.get("sections", []):
+    for entry in resume.get("sections", []):
         source = entry.get("source")
 
         # A section can pull in shared content instead of holding its own items.
         if source == "education":
-            if not (cv.get("showEducation", True) and about.get("education")):
+            if not (resume.get("showEducation", True) and about.get("education")):
                 continue
             items = "".join(f'<li class="entry">{entry_summary(item, depth)}</li>' for item in about["education"])
             inner = f'<ul class="entry-list">{items}</ul>'
         elif source == "projects":
-            if not (cv.get("showProjects", True) and content["projects"]):
+            if not (resume.get("showProjects", True) and content["projects"]):
                 continue
             items = "".join(project_entry(project, depth) for project in content["projects"])
             inner = f'<ul class="entry-list">{items}</ul>'
         elif source == "skills":
-            if not cv.get("showSkills", True):
+            if not resume.get("showSkills", True):
                 continue
             inner = skills_section_inner(content["skills"])
             if not inner:
@@ -593,21 +607,21 @@ def cv_page(content: dict, depth: int) -> str:
 
     body = f"""
       <header class="page-header">
-        <h1 class="page-title">{esc(cv.get("heading", "Curriculum vitae"))}</h1>
-        {paragraphs(cv.get("intro", ""), classes="prose-text")}
-        <p class="cv-actions">{download_html}<a class="text-link" href="#web-cv">Web version below</a></p>
+        <h1 class="page-title">{esc(resume.get("heading", "Resume"))}</h1>
+        {paragraphs(resume.get("intro", ""), classes="prose-text")}
+        <p class="resume-actions">{download_html}<a class="text-link" href="#web-resume">Web version below</a></p>
         {"".join(meta_bits)}
       </header>
-      <div id="web-cv" class="cv-body">
+      <div id="web-resume" class="resume-body">
         {"".join(sections)}
       </div>
     """
 
     return render_page(
         site=site,
-        path="cv/index.html",
-        title="CV",
-        description=f"Curriculum vitae of {site['name']} — education, research experience, projects, publications and skills.",
+        path="resume/index.html",
+        title="Resume",
+        description=f"Resume of {site['name']} — education, research experience, projects and skills.",
         body=body,
     )
 
@@ -731,7 +745,7 @@ def writing_page(content: dict, depth: int) -> str:
                 )
             blocks.append(
                 f'<div class="writing-group"><h3 class="group-title">{esc(category.get("title", ""))}</h3>'
-                f'<ul class="entry-list">{items}</ul></div>'
+                f'<ul class="entry-list">{"".join(items)}</ul></div>'
             )
         inner = "".join(blocks)
 
@@ -822,12 +836,14 @@ def sitemap_xml(content: dict) -> str:
     for project in content["projects"]:
         pages.append((f"research/{project['slug']}/index.html", "0.8"))
     pages += [
-        ("cv/index.html", "0.8"),
+        ("resume/index.html", "0.8"),
         ("writing/index.html", "0.6"),
         ("resources/index.html", "0.6"),
         ("contact/index.html", "0.5"),
     ]
+    # Match the canonical URLs: "about/index.html" is served as "/about/".
     entries = "".join(
-        f"  <url><loc>{base}/{path}</loc><changefreq>{freq}</changefreq></url>" for path, freq in pages
+        f"  <url><loc>{base}/{path.replace('index.html', '')}</loc><changefreq>{freq}</changefreq></url>"
+        for path, freq in pages
     )
     return f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{entries}\n</urlset>\n'

@@ -1,0 +1,65 @@
+{
+  "_readme": "RESEARCH PROJECT. One file per project in this folder; the filename is irrelevant because the 'slug' field sets the URL (/research/<slug>/). Files whose name starts with an underscore are ignored, so '_template.json' is a safe starting point. Delete any field you do not need — empty fields are simply not displayed. Text in [square brackets] is a placeholder: replace it with your own information.",
+
+  "slug": "eyes-on-the-task",
+  "title": "Eyes on the Task: Cognitive Load, Distractors and Attention",
+  "year": "2026",
+  "status": "Completed group project",
+
+  "short": "An eye-tracking study of how task difficulty and distractor relevance shape attentional distraction.",
+
+  "description": [
+    "This project examines how cognitive load and the relevance of distractors affect attentional distraction while people perform a logical reasoning task. Cognitive load theory and attentional control theory make different predictions here, and eye-tracking gives a direct measure of where attention goes rather than relying on self-report.",
+    "Participants completed Raven's Progressive Matrices with task-irrelevant stimuli sharing the visual field. Gaze points falling on relevant and irrelevant distractors were coded from the eye-tracker record, and compared across the four difficulty-by-relevance conditions."
+  ],
+
+  "researchQuestion": "What is the effect of task difficulty and distractor relevance on attentional distraction in university students performing a logical reasoning task, as measured by eye-tracking?",
+
+  "background": [
+    "Cognitive load theory holds that processing capacity is limited, so performance declines once demand exceeds capacity. Attentional control theory adds that the effort involved in a task changes how attentional resources are allocated: under high load, top-down control should dominate and distraction should fall.",
+    "Most previous work has looked at relevant and irrelevant distractors separately. This study looks at both at once, at two levels of load, which is closer to how attention is actually competed for in digital settings.",
+    "Two findings stood out. Participants were distracted by irrelevant distractors significantly more than by relevant ones, regardless of load. Task difficulty had no significant main effect on the total amount of distraction, but it interacted with relevance: under low load, gaze points on irrelevant distractors were higher. Attentional control theory holds up, but cognitive load on its own does not predict distraction."
+  ],
+
+  "focus": ["Attentional control", "Cognitive load", "Eye tracking"],
+  "methods": ["Eye tracking (Tobii Pro Fusion)", "Repeated-measures ANOVA", "PsychoPy", "Raven's Progressive Matrices"],
+  "skills": ["Experimental design", "Gaze data coding", "Quantitative analysis"],
+
+  "institution": "Department of Psychology, Ashoka University",
+  "role": "Experiment design and programming, eye-tracker calibration, manual gaze coding, analysis",
+  "supervisor": "Professor Dipanjan Ray",
+  "collaborators": ["Aditi Dahiya", "Cheryl Joshi", "Himanshi Lashkari", "Khushi Mohta", "Sumi Gupta"],
+
+  "method": {
+    "participants": "10 undergraduate students aged 17–22 at Ashoka University, recruited by nomination.",
+    "design": "2 (cognitive load: high, low) × 2 (distractor relevance: relevant, irrelevant) within-subjects factorial design.",
+    "measures": "Number of gaze points falling on relevant and irrelevant distractors, counted manually by three researchers; number of correct answers recorded.",
+    "stimuli": "Raven's Progressive Matrices levels 1 (low load) and 5 (high load); animated ghost images served as irrelevant distractors, and the answer options served as relevant distractors.",
+    "task": "A logical reasoning-based perceptual memory task performed in 15-minute slots, with eye-tracker calibration beforehand.",
+    "procedure": "Participants were told only the task procedure, not the study's objectives. The first five completed the high-load condition first and the remainder the low-load condition first, with a break between conditions, and were debriefed at the end.",
+    "software": ["PsychoPy (experiment programming)", "Tobii Pro Fusion (gaze recording)", "Jamovi 2.3 (analysis)"],
+    "analysis": "Descriptive statistics and Shapiro-Wilk tests for all four conditions, then a two-way repeated-measures ANOVA. With two levels per factor, sphericity was already satisfied."
+  },
+
+  "currentStatus": "Completed. Report written; a significant main effect of distractor relevance (F(1, 9) = 66.92, p < .001, η² = .881) and a significant relevance × difficulty interaction (F(1, 9) = 17.31, p = .002, η² = .658).",
+
+  "_documents": "Materials linked from the project page. 'file' is a path inside public/. Any file type can be linked — PDF, DOCX, PPTX, XLSX, CSV, TXT, ZIP or code. Omit 'file' for a link you do not want to publish yet.",
+  "documents": [
+    {
+      "label": "Project report",
+      "type": "PDF",
+      "file": "documents/research/Eyes_on_the_Task_Report.pdf"
+    },
+    {
+      "label": "Stimulus sheets",
+      "type": "PDF",
+      "file": "documents/research/Eyes_on_the_Task_Stimulus_Sheets.pdf"
+    }
+  ],
+
+  "_externalLinks": "Public repositories, pre-registrations, code. Same shape as documents, with 'url' instead of 'file'.",
+  "externalLinks": [],
+
+  "_references": "Optional. Cite as: {\"authors\": \"Surname, A. A., & Surname, B. B. (Year).\", \"reference\": \"Title of the work. Journal, volume(issue), pages. https://doi.org/xxxxx\"}",
+  "references": []
+}

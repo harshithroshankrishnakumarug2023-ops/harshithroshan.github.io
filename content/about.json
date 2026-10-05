@@ -2,26 +2,43 @@
   "_readme": "ABOUT PAGE. Paragraphs are plain text and rendered in order. Education and experience entries are optional — delete any entry you do not want published, and delete a whole section to remove it.",
 
   "bioHeading": "About me",
-  "_portrait": "Optional. Delete the \"portrait\" block to remove the image entirely. To use a real photograph, drop the file into public/images/ and change \"file\" to its path.",
+  "_portrait": "Optional. Delete the \"portrait\" block to remove the image entirely. To use a different photograph, drop the file into public/images/, change \"file\" to its path, and set \"width\" and \"height\" to that file's pixel dimensions so the page does not shift while it loads.",
   "portrait": {
-    "file": "images/portrait-placeholder.svg",
-    "alt": "Placeholder frame awaiting a portrait photograph",
-    "caption": "Replace with your own photograph: put the image in public/images/ and update the path above."
+    "file": "images/portrait.jpg",
+    "alt": "Photograph of Harshith Roshan",
+    "width": 960,
+    "height": 640,
+    "caption": ""
   },
   "bio": [
-    "I am an undergraduate student of psychology at Ashoka University, with minors in biology and philosophy. The breadth of that training — biological mechanisms, philosophical argument, and psychological measurement — shapes how I approach research questions.",
-    "I am interested in cognitive processes such as attention and inhibitory control, and in clinical questions around emotional processing, childhood experiences, and mental health. Much of my work concerns how early experiences are carried forward into the way people attend to, interpret, and respond to emotional material.",
-    "Methodologically, I work with behavioral experimentation — reaction-time paradigms such as Go/No-Go tasks built in PsychoPy — alongside questionnaire research and quantitative analysis. I care about doing this work carefully: clear design, appropriate measures, and analysis that the data can actually support.",
-    "I hope to continue this line of work in graduate study, with an emphasis on [your intended focus]."
+    "I am an undergraduate psychology researcher at Ashoka University, minoring in biology and philosophy. I work on questions about attention and inhibitory control, and about how early emotional experiences shape later psychological functioning.",
+    "Most of my work is experimental and quantitative: reaction-time paradigms, questionnaire research, and eye-tracking. I have worked in developmental psychopathology, clinical psychology and comparative cognition, in labs at Ashoka University and the University of North Carolina at Chapel Hill.",
+    "I am an undergraduate at Ashoka University (CGPA 3.86/4, Major GPA 3.95/4) and spent a semester on exchange at UNC Chapel Hill. I intend to pursue graduate study in cognitive or clinical psychology."
   ],
 
   "educationHeading": "Education",
   "education": [
     {
-      "title": "Ashoka University",
-      "subtitle": "B.Sc. Psychology",
-      "date": "",
-      "body": "Minors: Biology and Philosophy.",
+      "title": "B.Sc. Psychology (Hons. with Research)",
+      "subtitle": "Ashoka University",
+      "date": "2023 – 2027",
+      "body": "CGPA 3.86/4; Major GPA 3.95/4. Minors in Biology and Philosophy.",
+      "bullets": [],
+      "links": []
+    },
+    {
+      "title": "Semester Exchange Program",
+      "subtitle": "University of North Carolina at Chapel Hill",
+      "date": "2026",
+      "body": "GPA 4/4.",
+      "bullets": [],
+      "links": []
+    },
+    {
+      "title": "Class XII (CBSE)",
+      "subtitle": "The PSBB Millennium School, Chennai",
+      "date": "2023",
+      "body": "486/500.",
       "bullets": [],
       "links": []
     }
@@ -29,15 +46,64 @@
 
   "experienceHeading": "Research experience",
   "_experience": "Add an entry for each lab, project or research assistantship. Example shape: {\"title\": \"Lab name\", \"subtitle\": \"Research assistant\", \"date\": \"2025 – 2026\", \"body\": \"One-line research area.\", \"bullets\": [\"What you actually did\"], \"links\": []}. An empty list shows a graceful placeholder.",
-  "experience": [],
+  "experience": [
+    {
+      "title": "Family Journeys Co-Lab, UNC Chapel Hill",
+      "subtitle": "Research Assistant, Developmental Psychopathology",
+      "date": "January 2026 – May 2026",
+      "bullets": [
+        "Abstract screening for a systematic review of the developmental internalizing pathway to substance use disorders, classifying 100+ papers in Covidence across six developmental components.",
+        "Evaluated program data for 22 adolescents in the Reintegration Support Network and synthesized the findings into a 29-page report."
+      ],
+      "links": []
+    },
+    {
+      "title": "Neuroethology Lab, Ashoka University",
+      "subtitle": "Research Assistant, Quantitative Cognition in Zebrafish",
+      "date": "July 2025 – December 2025",
+      "bullets": [
+        "Developed a dot-splitting paradigm and a ratio-comparison T-maze task for zebrafish quantity discrimination.",
+        "Built the apparatus and stimuli, ran 20+ behavioral trials, and coded behavior in BORIS."
+      ],
+      "links": [
+        { "label": "Project page", "file": "research/zebrafish-quantity-discrimination/" }
+      ]
+    },
+    {
+      "title": "Professor Naseer's Lab, Ashoka University",
+      "subtitle": "Research Intern, Scale Adaptation for Drug Abuse Screening",
+      "date": "August 2024 – December 2024",
+      "bullets": [
+        "Literature reviews on culturally adapted substance-use assessments, informing the adaptation of the DAST-10 in Hindi.",
+        "Protocols and flowcharts for cross-cultural adaptation and psychometric validation."
+      ],
+      "links": []
+    }
+  ],
 
   "experienceEmpty": "Research experience will be listed here as projects progress.",
 
+  "clinicalHeading": "Clinical experience",
+  "_clinical": "Same shape as the research experience entries above. Delete the \"clinical\" block to remove the section.",
+  "clinical": [
+    {
+      "title": "RELA Hospital and Institute",
+      "subtitle": "Clinical Psychology Intern",
+      "date": "June 2026 – July 2026",
+      "bullets": [
+        "Administered and interpreted MoCA/MMSE assessments and conducted Mental Status Examinations for 5+ patients under supervision.",
+        "Joined case discussions on CBT, ACT, family and grief counseling, and followed up with 20+ living liver donors by structured assessment calls.",
+        "Observed counseling and outpatient consultations across liver transplantation, neurological ICU, palliative care and oncology."
+      ],
+      "links": []
+    }
+  ],
+
   "skillsHeading": "Skills",
-  "_skillsNote": "Skills live in content/skills.json so that the About page and the CV stay in sync.",
+  "_skillsNote": "Skills live in content/skills.json so that the About page and the Resume stay in sync.",
 
   "goalsHeading": "Current direction",
   "goals": [
-    "My current work examines how childhood emotional experiences relate to inhibitory control in emerging adults. In the longer term I want to keep working at the intersection of cognitive and clinical psychology, where experimental methods can be brought to bear on questions about mental health."
+    "My undergraduate thesis asks whether childhood emotional abuse and emotional neglect relate differently to inhibitory control in emerging adults. Alongside it, I am building experience in both laboratory experimentation and clinical assessment, because I want to keep working at the point where cognitive methods and mental health questions meet."
   ]
 }

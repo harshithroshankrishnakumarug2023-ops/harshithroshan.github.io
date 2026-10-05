@@ -40,7 +40,7 @@ def load_content() -> dict:
         "about": _read_json(CONTENT_DIR / "about.json"),
         "skills": _read_json(CONTENT_DIR / "skills.json"),
         "research": _read_json(CONTENT_DIR / "research.json"),
-        "cv": _read_json(CONTENT_DIR / "cv.json"),
+        "resume": _read_json(CONTENT_DIR / "resume.json"),
         "documents": _read_json(CONTENT_DIR / "documents.json"),
         "publications": _read_json(CONTENT_DIR / "publications.json"),
         "writing": _read_json(CONTENT_DIR / "writing.json"),

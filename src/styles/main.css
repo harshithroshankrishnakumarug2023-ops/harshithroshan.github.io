@@ -186,7 +186,7 @@ strong {
 .footer-role,
 .footer-links,
 .footer-copyright,
-.cv-meta,
+.resume-meta,
 .page-note,
 .doc-count,
 .site-name,
@@ -814,6 +814,8 @@ a:hover {
 .portrait img {
   display: block;
   width: 100%;
+  /* The width/height attributes give the intrinsic ratio; auto keeps it. */
+  height: auto;
   border: 1px solid var(--rule);
   border-radius: var(--radius);
   box-shadow: var(--shadow-md);
@@ -877,9 +879,9 @@ a:hover {
   padding-block: 0.22rem;
 }
 
-/* CV ==================================================================== */
+/* Resume ================================================================= */
 
-.cv-actions {
+.resume-actions {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -887,12 +889,12 @@ a:hover {
   margin: 1.85rem 0 0.75rem;
 }
 
-.cv-meta {
+.resume-meta {
   font-size: 0.82rem;
   color: var(--muted);
 }
 
-.cv-body .section:first-child {
+.resume-body .section:first-child {
   margin-top: 2.5rem;
 }
 
@@ -1244,7 +1246,7 @@ html.js .js-only {
   }
 }
 
-/* Print (useful for the CV) ============================================= */
+/* Print (useful for the resume page) ====================================== */
 
 @media print {
   body {
@@ -1256,7 +1258,7 @@ html.js .js-only {
   .site-footer,
   .filters,
   .doc-actions,
-  .cv-actions,
+  .resume-actions,
   .link-row,
   .portrait,
   .skip-link {

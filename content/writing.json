@@ -16,5 +16,69 @@
 
   "_entryShape": "{\"category\": \"academic\", \"title\": \"Title of the piece\", \"date\": \"2026\", \"type\": \"Literature review\", \"publication\": \"Course, Institution\", \"description\": \"One or two sentences.\", \"url\": \"https://…\", \"file\": \"\"}",
 
-  "entries": []
+  "entries": [
+    {
+      "category": "public",
+      "title": "Are You in Love, or Just Afraid of Being Single?",
+      "date": "2026",
+      "type": "Article",
+      "publication": "The Nudgelet, Medium",
+      "description": "Written after designing and analyzing a campus survey of 37 responses on relationship FOMO, using both qualitative and quantitative approaches. Most respondents turned out to be influenced by it.",
+      "url": "https://medium.com/the-nudgelet/are-you-in-love-or-just-afraid-of-being-single-d25945627cd2"
+    },
+    {
+      "category": "academic",
+      "title": "Exploring Psychological, Social and Legal Implications of Image-Based Sexual Abuse Through Posts on Reddit",
+      "date": "2025",
+      "type": "Literature review",
+      "publication": "PSY-3045: Violence as a Human Behaviour, Ashoka University",
+      "description": "Co-authored review of how image-based sexual abuse appears in Reddit posts, drawing on survivor accounts alongside research on psychological impact, perpetrator motivation and legal response.",
+      "file": "documents/research/Image_Based_Sexual_Abuse_Literature_Review.pdf"
+    },
+    {
+      "category": "science-communication",
+      "title": "Behind the Screens: Whose Image Is It Really?",
+      "date": "2026",
+      "type": "Zine",
+      "publication": "Image-based sexual abuse awareness zine",
+      "description": "A student zine on image-based sexual abuse: what it is, how survivors are affected, what the law currently provides, and where to report and find support. Built from Reddit posts and research papers collected during the literature review.",
+      "file": "documents/writing/Image_Based_Sexual_Abuse_Zine.pdf"
+    },
+    {
+      "category": "science-communication",
+      "title": "Optimism Bias: Why We Think the Future Will Always Favour Us",
+      "date": "2025",
+      "type": "Handbook entry",
+      "publication": "A–Z of Behavioral Science, Centre for Social & Behavioral Change",
+      "description": "An entry on optimism bias for a behavioral science handbook written for a general audience.",
+      "file": "documents/writing/CSBC_Optimism_Bias_Handbook.pdf"
+    },
+    {
+      "category": "coursework",
+      "title": "Cultural, Linguistic and Contextual Considerations for Adapting the DAST-10 in India",
+      "date": "2024",
+      "type": "Essay",
+      "publication": "PSY-IS-4158: Validation for Substance Abuse Scale for Indian Population, Ashoka University",
+      "description": "A week 8 essay on why a substance-use screening instrument cannot simply be translated: stigma, gender, and the social meaning of the questions all change what respondents will honestly report.",
+      "file": "documents/writing/DAST-10_Cultural_Adaptation_Essay.pdf"
+    },
+    {
+      "category": "coursework",
+      "title": "Regional Synapse Gain and Loss Accompany Memory Formation in Larval Zebrafish",
+      "date": "2025",
+      "type": "Term paper",
+      "publication": "Ashoka University",
+      "description": "A summary and critical reading of work on synaptic changes accompanying memory formation in larval zebrafish.",
+      "file": "documents/other/Zebrafish_Memory_Term_Paper.pdf"
+    },
+    {
+      "category": "coursework",
+      "title": "Biosignals to Wellbeing: Practical Record",
+      "date": "2025",
+      "type": "Laboratory record",
+      "publication": "PSY-3027 / BIO-3414, Ashoka University",
+      "description": "Practical records for pulse and ECG recording with a PowerLab, galvanic skin response, and eye-tracking: principle, apparatus, method and observations for each.",
+      "file": "documents/other/Biosignals_to_Wellbeing_Practical_Record.pdf"
+    }
+  ]
 }
