@@ -9,11 +9,14 @@
         "PsychoPy",
         "Jamovi",
         "BORIS",
+        "SPSS",
         "Covidence",
         "Qualtrics",
         "G*Power",
         "Tobii Pro Fusion",
-        "LabChart 8"
+        "LabChart 8",
+        "Zotero",
+        "Excel"
       ]
     },
     {
@@ -26,7 +29,8 @@
         "Galvanic skin response",
         "Questionnaire research",
         "Psychometrics",
-        "Structured interviews"
+        "Structured Clinical Interview",
+        "Mental Status Examination"
       ]
     },
     {
