@@ -1,11 +1,11 @@
 {
   "_readme": "SITE-WIDE SETTINGS. Edit this file to change your name, tagline, navigation, links and footer. Keys starting with _ are notes and are ignored by the build.",
 
-  "name": "Harshith Roshan",
+  "name": "Harshith Roshan Krishna Kumar",
   "role": "Psychology Researcher",
   "tagline": "Psychology (Hons. with Research) · Attention, Emotion and Executive Function",
-  "siteTitle": "Harshith Roshan — Psychology Researcher",
-  "siteDescription": "Personal academic website of Harshith Roshan, undergraduate psychology researcher at Ashoka University — research projects, resume and academic writing in cognitive and clinical psychology.",
+  "siteTitle": "Harshith Roshan Krishna Kumar — Psychology Researcher",
+  "siteDescription": "Personal academic website of Harshith Roshan Krishna Kumar, undergraduate psychology researcher at Ashoka University — research projects, resume and academic writing in cognitive and clinical psychology.",
   "language": "en",
 
   "_baseUrl": "The live address of the deployed site, with a trailing slash. It is only used for canonical URLs, Open Graph tags and the sitemap — page links are relative, so the site works at any path. Current repo: harshithroshankrishnakumarug2023-ops/harshithroshan.github.io, which GitHub Pages serves from a sub-folder because the repository name is not the same as the account name.",

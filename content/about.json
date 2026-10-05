@@ -5,7 +5,7 @@
   "_portrait": "Optional. Delete the \"portrait\" block to remove the image entirely. To use a different photograph, drop the file into public/images/, change \"file\" to its path, and set \"width\" and \"height\" to that file's pixel dimensions so the page does not shift while it loads.",
   "portrait": {
     "file": "images/portrait.jpg",
-    "alt": "Photograph of Harshith Roshan",
+    "alt": "Photograph of Harshith Roshan Krishna Kumar",
     "width": 960,
     "height": 640,
     "caption": ""

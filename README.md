@@ -1,4 +1,4 @@
-# Harshith Roshan — Academic Website
+# Harshith Roshan Krishna Kumar — Academic Website
 
 A minimal, professional personal academic website: research portfolio, web resume,
 publication and project archive, and document library.
