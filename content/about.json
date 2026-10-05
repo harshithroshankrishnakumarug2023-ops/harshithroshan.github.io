@@ -1,7 +1,8 @@
 {
   "_readme": "ABOUT PAGE. Paragraphs are plain text and rendered in order. Education and experience entries are optional — delete any entry you do not want published, and delete a whole section to remove it.",
 
-  "bioHeading": "About me",
+  "_bioHeading": "Set to \"\" to leave the biography without a heading, so it sits directly under the page title.",
+  "bioHeading": "",
   "_portrait": "Optional. Delete the \"portrait\" block to remove the image entirely. To use a different photograph, drop the file into public/images/, change \"file\" to its path, and set \"width\" and \"height\" to that file's pixel dimensions so the page does not shift while it loads.",
   "portrait": {
     "file": "images/portrait.jpg",
